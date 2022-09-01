@@ -1,0 +1,31 @@
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+  color: #051B1F;
+  ;
+}
+
+.box {
+  height: 100vh;
+  width: 100vw;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
