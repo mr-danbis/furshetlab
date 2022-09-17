@@ -1,0 +1,17 @@
+.clients {
+    @include adaptiv-marginBottom(200, 100);
+
+    &__slider {
+        &-item {
+            height: 120px !important;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+
+            &_img {
+                object-fit: contain;
+                height: -webkit-fill-available;
+            }
+        }
+    }
+}

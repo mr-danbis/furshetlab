@@ -4,9 +4,22 @@
 @import 'settings/reset';
 @import 'settings/libs';
 @import 'settings/global';
+@import 'settings/slider';
 
 //common blocks
 @import '../blocks/header/header';
 @import '../blocks/footer/footer';
+@import '../blocks/mobMenu/mobMenu';
 
 //main page blocks
+@import '../blocks/promo/promo';
+@import '../blocks/discounts/discounts';
+@import '../blocks/delivery/delivery';
+@import '../blocks/new-products/new-products';
+@import '../blocks/sale/sale';
+@import '../blocks/reviews/reviews';
+@import '../blocks/advantages/advantages';
+@import '../blocks/news/news';
+@import '../blocks/howOrder/howOrder';
+@import '../blocks/payment-delivery/payment-delivery';
+@import '../blocks/clients/clients';

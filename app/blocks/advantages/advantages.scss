@@ -1,0 +1,60 @@
+.advantages{
+    @include adaptiv-marginBottom(150,75);
+    &__group{
+        display: flex;
+        justify-content: space-between;
+        &-item{
+            width: 20%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        &-img{
+            margin-bottom: 28px;
+        }
+        &-title{
+            @include adaptiv-font(22,18);
+            text-align: center;
+            margin-bottom: 11px;
+            font-family: 'OrchideaProBold';
+            height: 45px;
+        }
+        &-text{
+            @include adaptiv-font(19,15);
+            text-align: center;
+            line-height: 140%;
+        }
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .advantages{
+        &__group{
+            flex-wrap: wrap;
+            justify-content: space-around;
+            &-item{
+                width: 40%;
+                &:nth-child(1),
+                &:nth-child(2){
+                    @include adaptiv-marginBottom(50,25);
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 400px) {
+    .advantages{
+        &__group{
+            &-text{
+                width: 80%;
+            }
+            &-item{
+                width: 100%;
+                @include adaptiv-marginBottom(50,25);
+            }
+        }
+    }
+}

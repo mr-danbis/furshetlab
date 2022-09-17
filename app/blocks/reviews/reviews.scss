@@ -1,0 +1,73 @@
+.reviews{
+    @include adaptiv-marginBottom(150,75);
+    background-image: url(/images/section-title-bg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    
+    &__slider{
+        &-item{
+            padding: 32px;
+            background-color: #454850;
+            position: relative;
+            &::after{
+                position: absolute;
+                width: 48px;
+                height: 38px;
+                content: url(/images/marks.svg);
+                top: -10px;
+                right: 40px;
+            }
+            &_rating{
+                display: flex;
+                @include adaptiv-marginBottom(30,15);
+                &>img{
+                    &:not(:last-child){
+                        margin-right: 8px;
+                    }
+                }
+            }
+            &_text{
+                font-family: 'OrchideaProRegular';
+                line-height: 150%;
+                color: #FAF6F0;
+                @include adaptiv-font(18,15);
+                @include adaptiv-marginBottom(98,49);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -moz-box;
+                -moz-box-orient: vertical;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                line-clamp: 4;
+                box-orient: vertical;
+            }
+            &_info{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &_name{
+                color: #DBC09E;
+                font-family: 'OrchideaProMedium';
+                @include adaptiv-font(18,15);
+                margin-bottom: 5px;
+            }
+            &_date{
+                font-family: 'OrchideaProRegular';
+                @include adaptiv-font(16,12);
+                color: rgba(219, 192, 158, 0.5);
+            }
+            &_more{
+                font-family: 'OrchideaProMedium';
+                @include adaptiv-font(18,15);
+                color: rgba(219, 192, 158, 0.5);
+                transition: all .3s;
+                &:hover{
+                    color: #DBC09E;
+                }
+            }
+        }
+    }
+}

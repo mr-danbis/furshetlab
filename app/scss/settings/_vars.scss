@@ -1,10 +1,26 @@
 $maxWidth: 1920;
-$minWidth: 270;
+$minWidth: 320;
+
+$text1Color: #454850;
+// $tex2Color: #BDBDBD;
+$background1Color: #FAF6F0;
+// $background2Color: #D5C6B6;
+$btnColor: #C79B77;
+$priceColor: #B88154;
+
 
 @mixin adaptiv-font($pcValue, $mobValue) {
   $addSize: $pcValue - $mobValue;
   $differenceWidth: $maxWidth - $minWidth;
   font-size: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
+}
+
+
+
+@mixin adaptiv-padding($pcValue, $mobValue) {
+  $addSize: $pcValue - $mobValue;
+  $differenceWidth: $maxWidth - $minWidth;
+  padding: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }
 
 @mixin adaptiv-paddingRight($pcValue, $mobValue) {
@@ -29,4 +45,39 @@ $minWidth: 270;
   $addSize: $pcValue - $mobValue;
   $differenceWidth: $maxWidth - $minWidth;
   padding-bottom: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
+}
+
+
+
+@mixin adaptiv-marginRight($pcValue, $mobValue) {
+  $addSize: $pcValue - $mobValue;
+  $differenceWidth: $maxWidth - $minWidth;
+  margin-right: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
+}
+
+@mixin adaptiv-marginLeft($pcValue, $mobValue) {
+  $addSize: $pcValue - $mobValue;
+  $differenceWidth: $maxWidth - $minWidth;
+  margin-left: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
+}
+
+@mixin adaptiv-marginTop($pcValue, $mobValue) {
+  $addSize: $pcValue - $mobValue;
+  $differenceWidth: $maxWidth - $minWidth;
+  margin-top: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
+}
+
+@mixin adaptiv-marginBottom($pcValue, $mobValue) {
+  $addSize: $pcValue - $mobValue;
+  $differenceWidth: $maxWidth - $minWidth;
+  margin-bottom: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
+}
+
+
+
+
+@mixin adaptiv-gridGap($pcValue, $mobValue) {
+  $addSize: $pcValue - $mobValue;
+  $differenceWidth: $maxWidth - $minWidth;
+  grid-gap: calc(#{$mobValue + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$differenceWidth}));
 }

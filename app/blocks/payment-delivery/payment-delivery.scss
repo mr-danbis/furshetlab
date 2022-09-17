@@ -1,0 +1,140 @@
+.payment-delivery {
+
+    &__title {
+
+        &:after,
+        &:before {
+            visibility: hidden;
+        }
+    }
+
+    &__inner {
+        display: flex;
+    }
+
+    &__info {
+        width: 45%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__columns {
+        display: flex;
+        justify-content: space-around;
+        @include adaptiv-marginBottom(45, 27);
+    }
+
+    &__column {
+        width: 40%;
+
+        &-title {
+            @include adaptiv-marginBottom(33, 16);
+            text-align: center;
+            font-family: 'OrchideaProBold';
+            @include adaptiv-font(24, 18);
+        }
+
+        &-item {
+            font-family: 'OrchideaProBold';
+            @include adaptiv-font(18, 15);
+            position: relative;
+            padding-left: 40px;
+
+            &::before {
+                left: 0;
+                position: absolute;
+                content: url(/images/done.svg);
+            }
+
+            &:not(:last-child) {
+                @include adaptiv-marginBottom(30, 15);
+            }
+        }
+    }
+
+    &__img {
+        width: 47%;
+        object-fit: cover;
+        border-radius: 0px 50px 50px 0px;
+        overflow: hidden;
+    }
+
+    &__btn {
+        width: 30%;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0);
+        color: #454850;
+        border: 1px solid #c79b77;
+
+        &:hover {
+            background-color: #c79b77;
+            color: #fff;
+        }
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .payment-delivery {
+        &__img {
+            width: 37%;
+        }
+
+        &__info {
+            width: 60%;
+        }
+
+        &__columns {
+            justify-content: space-between;
+        }
+
+        &__column {
+            width: 47%;
+        }
+    }
+}
+
+
+@media (max-width: 750px) {
+    .payment-delivery {
+        &__inner {
+            flex-direction: column;
+        }
+        &__img{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        &__info{
+            width: 90%;
+        }
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    .payment-delivery {
+        &__columns {
+            flex-direction: column;
+        }
+         &__column {
+            width: 100%;
+            &:first-child{
+                margin-bottom: 30px;
+            }
+        }
+        &__btn{
+            width: 50%;
+        }
+    }
+}
+
+
+
+@media (max-width: 400px) {
+    .payment-delivery {
+        &__btn{
+            width: 100%;
+        }
+    }
+}

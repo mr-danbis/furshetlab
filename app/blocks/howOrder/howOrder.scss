@@ -1,0 +1,195 @@
+.howOrder {
+    @include adaptiv-marginBottom(150, 75);
+    overflow: hidden;
+
+    &__inner {
+        background-color: #454850;
+        border-radius: 300px;
+        @include adaptiv-padding(70, 35);
+    }
+
+    &__title {
+        color: #FAF6F0;
+        @include adaptiv-marginBottom(75, 37);
+        &::before,
+        &::after{
+            visibility: hidden;
+        }
+    }
+
+    &__steps {
+        display: flex;
+        justify-content: space-between;
+        &-step {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &_number {
+                @include adaptiv-font(64, 30);
+                text-align: center;
+                color: #DBC09E;
+                margin-bottom: 5px;
+            }
+
+            &_text {
+                max-width: 330px;
+                @include adaptiv-font(24, 18);
+                text-align: center;
+                color: #FAF6F0;
+            }
+            &:nth-child(even){
+                margin-top: 200px;
+            }
+            &:nth-child(1){
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: url(/images/arrow.svg);
+                    width: 128px;
+                    height: auto;
+                    bottom: 10%;
+                    left: 50%;
+                }
+            }
+            &:nth-child(2){
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: url(/images/arrow.svg);
+                    width: 128px;
+                    height: auto;
+                    bottom: 10%;
+                    left: 120%;
+                    transform: rotate(-90deg);
+                }
+            }
+            &:nth-child(3){
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: url(/images/arrow.svg);
+                    width: 128px;
+                    height: auto;
+                    transform: scale(1,-1) rotate(-75deg);
+                    left: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media (max-width: 1200px) {
+    .howOrder{
+        background-color: #454850;
+        &__inner{
+            border-radius: 0;
+        }
+        &__steps{
+            flex-wrap: wrap;
+            &-step{
+                width: 45%;
+                &_text{
+                    max-width: 220px;
+                }
+                &:nth-child(1),
+                &:nth-child(2){
+                    margin-bottom: 50px;
+                }
+
+                &:nth-child(1){
+                    &::after{
+                        bottom: 40%;
+                        left: 100%;
+                        transform: scale(1,-1) rotate(-75deg);
+                    }
+                }
+
+                &:nth-child(2){
+                    &::after{
+                        bottom: -150%;
+                        left: -20%;
+                        transform: scale(-1,1) rotate(-15deg);
+                    }
+                }
+                
+                &:nth-child(3){
+                    &::after{
+                        transform: none;
+                        left: 50%;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 750px) {
+    .howOrder{
+        &__steps{
+            &-step{
+                width: 100%;
+                
+                &:nth-child(even){
+                    margin-top: 0;
+                }
+
+                &:not(:last-child){
+                    margin-bottom: 100px;
+                }
+
+                &:nth-child(1){
+                    &::after{
+                        left: 60%;
+                        top: 130%;
+                        transform: scale(1, -1) rotate(-130deg);
+                    }
+                }
+
+                &:nth-child(2){
+                    &::after{
+                        transform: rotate(45deg);
+                        left: 0;
+                    }
+                }
+
+                &:nth-child(3){
+                    &::after{
+                        left: 60%;
+                        top: 130%;
+                        transform: scale(1, -1) rotate(-130deg);
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+@media (max-width: 550px) {
+    .howOrder{
+        &__steps{
+            &-step{
+                &:nth-child(1),
+                &:nth-child(3){
+                    &::after{
+                        left: inherit;
+                        right: -30px;
+                    }
+                }
+
+                &:nth-child(2){
+                    &::after{
+                        left: -70px;
+                    }
+                }
+            }
+        }
+    }
+}

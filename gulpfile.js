@@ -66,7 +66,7 @@ function build() {
     'app/css/style.min.css',
     'app/js/main.min.js',
     'app/fonts/**/*',
-    'app/favicon.ico'
+    // 'app/favicon.ico'
   ], {base: 'app'})
     .pipe(dest('dist'));
 }

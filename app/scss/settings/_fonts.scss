@@ -1,14 +1,43 @@
 //example
 
-// @font-face {
-//   font-family: 'HelveticaLight';
-//   src: url('/fonts/HelveticaLight.woff') format('woff');
-//   font-weight: 300;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: 'HelveticaLight';
-//   src: url('/fonts/HelveticaLight.woff2') format('woff2');
-//   font-weight: 300;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'OrchideaProExtraLight';
+  src: url('/fonts/OrchideaPro-ExtraLight.woff') format('woff'), url('/fonts/OrchideaPro-ExtraLight.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'OrchideaProLight';
+  src: url('/fonts/OrchideaPro-Light.woff') format('woff'), url('/fonts/OrchideaPro-Light.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'OrchideaProRegular';
+  src: url('/fonts/OrchideaPro-Regular.woff') format('woff'), url('/fonts/OrchideaPro-Regular.woff2') format('woff2');
+  font-style: 400;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'OrchideaProMedium';
+  src: url('/fonts/OrchideaPro-Medium.woff') format('woff'), url('/fonts/OrchideaPro-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'OrchideaProSemiBold';
+  src: url('/fonts/OrchideaPro-SemiBold.woff') format('woff'), url('/fonts/OrchideaPro-SemiBold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'OrchideaProBold';
+  src: url('/fonts/OrchideaPro-Bold.woff') format('woff'), url('/fonts/OrchideaPro-Bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+}

@@ -1,0 +1,99 @@
+.slider-theme {
+    &__container {
+        @include adaptiv-marginBottom(35, 17);
+        @include adaptiv-marginRight(-40, -5);
+        @include adaptiv-marginLeft(-40, -5);
+    }
+
+    &__item {
+        @include adaptiv-marginRight(40, 5);
+        @include adaptiv-marginLeft(40, 5);
+        border-radius: 50px;
+    }
+
+    &__navigation {
+        display: flex;
+        justify-content: end;
+
+        &-btn {
+            width: 50px;
+            height: 50px;
+            border: 1px solid rgba(69, 72, 80, 0.5);
+            border-radius: 50%;
+            transition: all .3s;
+            padding: 13px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #C79B77;
+                border: 1px solid transparent;
+            }
+        }
+
+        &-prev {
+            margin-right: 15px;
+            content: url(/images/arrow-prev-black.svg);
+
+            &:hover {
+                content: url(/images/arrow-prev-white.svg);
+            }
+        }
+
+        &-next {
+            content: url(/images/arrow-next-black.svg);
+
+            &:hover {
+                content: url(/images/arrow-next-white.svg);
+            }
+        }
+    }
+}
+
+
+
+.slick{
+    &-list{
+        padding: 15px !important;
+    }
+    &-slide{
+        margin: 0 40px;
+    }
+    &-dots{
+        height: 10px;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > li{
+            width: 8px;
+            height: 8px;
+            border: 1px solid #454850;
+            background-color: transparent;
+            border-radius: 50%;
+            transition: all .3s;
+            &:not(:last-child){
+                margin-right: 10px;
+            }
+            & > button {
+                color: transparent;
+            }
+        }
+        
+        & > .slick-active{
+            background-color: #DFB778;
+            border: 1px solid #454850;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
+
+
+@media (max-width: 750px) {
+    .slider-theme {
+        &__navigation {
+            display: none;
+        }
+    }
+}

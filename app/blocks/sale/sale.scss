@@ -1,0 +1,38 @@
+.sale{
+    background-image: url(/images/section-title-bg.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    &__inner .container .products__list .products__item::before{
+        display: none;
+    }
+    
+    &__title{
+        margin-left: auto;
+        width: 35%;
+        text-align: left;
+        color: #FAF6F0;
+        background-color: #454850;
+        @include adaptiv-paddingTop(70,40);
+        @include adaptiv-paddingBottom(70,40);
+        @include adaptiv-paddingLeft(90,50);
+        @include adaptiv-marginBottom(80,40);
+        border-radius: 110px 0px 0px 110px;
+        @include adaptiv-font(45,20);
+    }
+}
+
+@media (max-width: 650px) {
+    .sale{
+        &__title{
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .sale{
+        &__title{
+            width: 60%;
+        }
+    }
+}

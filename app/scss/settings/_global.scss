@@ -1,31 +1,145 @@
 html,
 body {
-  overflow-x: hidden;
-  height: 100%;
-  color: #051B1F;
-  ;
+    height: 100%;
+    background-color: $background1Color;
+    color: $text1Color;
+    font-family: 'OrchideaProRegular';
 }
 
 .box {
-  height: 100vh;
-  width: 100vw;
+    height: 100vh;
+    width: 100vw;
+}
+
+.bgInner{
+    background-image: url(/images/section-title-bg-2.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    @include adaptiv-marginBottom(145, 73);
+}
+
+.section-title{
+    @include adaptiv-font(45,20);
+    font-family: 'OrchideaProSemiBold';
+    width: fit-content;
+    position: relative;
+    &-center{
+        @include adaptiv-marginBottom(80,40);
+        margin-right: auto;
+        margin-left: auto;
+        color: $text1Color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 50%;
+        text-align: center;
+
+        &::after {
+            position: absolute;
+            content: '';
+            height: 1px;
+            width: 221px;
+            background-color: #DBC09E;
+            right: -251px;
+        }
+    
+        &::before {
+            position: absolute;
+            content: '';
+            height: 1px;
+            width: 221px;
+            background-color: #DBC09E;
+            left: -251px;
+        }
+    }
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 .main {
-  flex: 1 0 auto;
+    overflow-x: hidden;
+    flex: 1 0 auto;
 }
 
 .footer {
-  flex: 0 0 auto;
+    flex: 0 0 auto;
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    @include adaptiv-font(18, 13);
+    color: #FFFFFF;
+    background-color: $btnColor;
+    border-radius: 50px;
+    transition: all .3s;
+    border: 1px solid transparent;
+
+    &:hover {
+        border: 1px solid $btnColor;
+        color: $btnColor;
+        background: #FFFFFF;
+    }
+}
+
+.tabs-active{
+    background-color: #454850;
+    border-radius: 20px 20px 0px 0px;
+    color: #DBC09E;
+    font-family: 'OrchideaProMedium';
+    transition: all .3s;
+}
+
+
+.item-hover{
+    transition: all .3s;
+    &:hover{
+        opacity: 0.5;
+    }
+}
+
+.number-order{
+    color: $btnColor;
+    width: fit-content;
+    border-bottom: 1px solid $btnColor;transition: all .3s;
+    &:hover{
+        border-bottom: 1px solid transparent;
+    }
+}
+
+.number-tel{
+    font-family: 'OrchideaProBold';
+    color: inherit;
+    margin-bottom: 5px;
+    &--footer{
+        color: #FAF6F0;
+    }
+}
+
+.social__link{
+    transition: all .3s;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .container {
+        width: 92%;
+    }
 }
