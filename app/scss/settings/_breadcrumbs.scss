@@ -1,0 +1,30 @@
+.breadcrumbs{
+    @include adaptiv-paddingTop(83,30);
+    margin-bottom: 30px;
+    &__list{
+        display: flex;
+        align-items: center;
+    }
+    &__item{
+        &:not(:last-child){
+            margin-right: 21px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            &::after{
+                content: url(/images/arrow-next.svg);
+                position: absolute;
+                width: 5px;
+                height: 10px;
+                right: -11px;
+            }
+        }
+    }
+    &__link{
+        font-size: 18px;
+        color: rgba(69, 72, 80, 0.5);
+        &--active{
+            color: #454850;
+        }
+    }
+}

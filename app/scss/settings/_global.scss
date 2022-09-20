@@ -11,7 +11,13 @@ body {
     width: 100vw;
 }
 
-.bgInner{
+.package{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+
+.bgInner {
     background-image: url(/images/section-title-bg-2.svg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -20,13 +26,14 @@ body {
     @include adaptiv-marginBottom(145, 73);
 }
 
-.section-title{
-    @include adaptiv-font(45,20);
+.section-title {
+    @include adaptiv-font(45, 20);
     font-family: 'OrchideaProSemiBold';
     width: fit-content;
     position: relative;
-    &-center{
-        @include adaptiv-marginBottom(80,40);
+
+    &-center {
+        @include adaptiv-marginBottom(80, 40);
         margin-right: auto;
         margin-left: auto;
         color: $text1Color;
@@ -44,7 +51,7 @@ body {
             background-color: #DBC09E;
             right: -251px;
         }
-    
+
         &::before {
             position: absolute;
             content: '';
@@ -65,6 +72,19 @@ body {
 .main {
     overflow-x: hidden;
     flex: 1 0 auto;
+
+    &-page__title {
+        font-family: 'OrchideaProSemiBold';
+        font-size: 45px;
+        color: #454850;
+        @include adaptiv-marginBottom(70,35);
+    }
+
+    &--all-dishes{
+        & > .discounts {
+            margin-top: 0;
+        }
+    }
 }
 
 .footer {
@@ -96,7 +116,7 @@ body {
     }
 }
 
-.tabs-active{
+.tabs-active {
     background-color: #454850;
     border-radius: 20px 20px 0px 0px;
     color: #DBC09E;
@@ -105,34 +125,39 @@ body {
 }
 
 
-.item-hover{
+.item-hover {
     transition: all .3s;
-    &:hover{
+
+    &:hover {
         opacity: 0.5;
     }
 }
 
-.number-order{
+.number-order {
     color: $btnColor;
     width: fit-content;
-    border-bottom: 1px solid $btnColor;transition: all .3s;
-    &:hover{
+    border-bottom: 1px solid $btnColor;
+    transition: all .3s;
+
+    &:hover {
         border-bottom: 1px solid transparent;
     }
 }
 
-.number-tel{
+.number-tel {
     font-family: 'OrchideaProBold';
     color: inherit;
     margin-bottom: 5px;
-    &--footer{
+
+    &--footer {
         color: #FAF6F0;
     }
 }
 
-.social__link{
+.social__link {
     transition: all .3s;
-    &:hover{
+
+    &:hover {
         transform: scale(1.1);
     }
 }

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../blocks/head/head.html')
+
+<body>
+    <div class="wrapper">
+
+        @@include('../blocks/header/header.html')
+        <!-- /.header -->
+
+        <main class="main main--all-dishes">
+
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="/">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs__link--active" href="">Все блюда</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <h1 class="main-page__title">
+                    Готовая еда с доставкой на дом или офис
+                </h1>
+
+
+                <div class="package">
+                    @@include('../blocks/filter/filter.html')
+                    <!-- /.filter -->
+
+                    @@include('../blocks/products/products.html')
+                    <!-- /.products -->
+                </div>
+
+            </div>
+
+
+            @@include('../blocks/discounts/discounts.html')
+            <!-- /.discounts -->
+
+            @@include('../blocks/sale/sale.html')
+            <!-- /.sale -->
+
+            @@include('../blocks/payment-delivery/payment-delivery.html')
+            <!-- /.payment-delivery -->
+
+        </main>
+        <!-- /.main -->
+
+        @@include('../blocks/mobMenu/mobMenu.html')
+        <!-- /.mobMenu -->
+
+        @@include('../blocks/footer/footer.html')
+        <!-- /.footer -->
+
+    </div>
+    <!-- /.wrapper -->
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

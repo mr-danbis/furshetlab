@@ -1,0 +1,92 @@
+.filter {
+    width: 20%;
+
+    &__item {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #F1F1F1;
+
+        &-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 19px;
+        }
+
+        &-title {
+            font-size: 18px;
+        }
+    }
+
+    &__price {
+        &-fromTo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        &-slider {
+            &>input {
+                width: 100%;
+            }
+        }
+
+        &-from,
+        &-to {
+            width: 37%;
+            font-size: 16px;
+            border: 1px solid #454850;
+            border-radius: 30px;
+            padding: 10px 20px;
+        }
+
+        &-line {
+            width: 18px;
+            height: 1px;
+            border: 1px solid #C4C4C4;
+        }
+    }
+
+    &__chapters {
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            &_name{
+                display: flex;
+                align-items: center;
+            }
+
+            &_checkbox{
+                margin: 0;
+                margin-right: 15px;
+                width: 18px;
+                height: 18px;
+            }
+
+            &_title{
+                font-size: 18px;
+            }
+
+            &_count{
+                font-size: 14px;
+                color: rgba(69, 72, 80, 0.5);
+            }
+        }
+
+        &-btn{
+            font-size: 16px;
+            color: #DBC09E;
+            margin-left: 33px;
+            transition: all .3s;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}

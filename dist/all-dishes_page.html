@@ -9,9 +9,9 @@
 </head>
 
 <body>
-  <div class="wrapper">
+    <div class="wrapper">
 
-    <header class="header">
+        <header class="header">
     <div class="header__top">
         <div class="container">
             <div class="header__top-inner">
@@ -164,151 +164,221 @@
 
 
 </header>
-    <!-- /.header --> 
-    
-    <main class="main">
-        <section class="promo">
-    <div class="container">
-        <div class="promo-inner">
-            <h1 class="promo__title title">Доставка блюд для праздничного стола</h1>
-            <a class="promo__btn btn" href="">ЗАКАЗАТЬ</a>
-        </div>
-    </div>
-</section>
-        <!-- /.promo --> 
+        <!-- /.header -->
 
-        <section class="discounts">
-    <div class="container">
-        <div class="discounts__inner">
-            <div class="discounts__item">
-                <div class="discounts__item-info">
-                    <div class="discounts__item-discount">
-                        <h2 class="discounts__item-discount_percent">10%</h2>
-                        <div class="discounts__item-discount_text">
-                            Скидка
-                        </div>
-                    </div>
-                    <p class="discounts__item-text">
-                        Для молодожёнов
-                    </p>
+        <main class="main main--all-dishes">
+
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="/">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs__link--active" href="">Все блюда</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <h1 class="main-page__title">
+                    Готовая еда с доставкой на дом или офис
+                </h1>
+
+
+                <div class="package">
+                    <section class="filter">
+    <div class="filter__inner">
+        <ul class="filter__list">
+
+
+
+            <li class="filter__item filter__price">
+                <div class="filter__item-top">
+                    <h4 class="filter__item-title">
+                        Цена, ₽
+                    </h4>
+                    <button class="filter__item-openCloseBtn">
+                        <img class="filter__item-openCloseBtn_img" src="/images/cross.svg"
+                            alt="Свернуть/развернуть параметр фильтра">
+                    </button>
                 </div>
 
-                <img class="discounts__item-img" src="/images/discounts/1.png" alt="Скидка 10%">
-            </div>
-            <div class="discounts__item">
-                <div class="discounts__item-info">
-                    <div class="discounts__item-discount">
-                        <h2 class="discounts__item-discount_percent">10%</h2>
-                        <div class="discounts__item-discount_text">
-                            Скидка
+                <div class="filter__price-range filter-hidden">
+                    <div class="filter__price-fromTo">
+                        <div class="filter__price-from">от
+                            <span>10</span>
+                        </div>
+                        <span class="filter__price-line"></span>
+                        <div class="filter__price-to">до
+                            <span>33 840</span>
                         </div>
                     </div>
-                    <p class="discounts__item-text">
-                        Ко Дню Рождения
-                    </p>
-                </div>
 
-                <img class="discounts__item-img" src="/images/discounts/2.png" alt="Скидка 10%">
-            </div>
-            <div class="discounts__item">
-                <div class="discounts__item-info">
-                    <div class="discounts__item-discount">
-                        <h2 class="discounts__item-discount_percent">9%</h2>
-                        <div class="discounts__item-discount_text">
-                            Скидка
-                        </div>
+                    <div class="filter__price-slider">
+                        <input type="range" min="0" max="100" step="1" value="50">
                     </div>
-                    <p class="discounts__item-text">
-                        На Новоселье
-                    </p>
+                </div>
+            </li>
+
+
+
+
+            <li class="filter__item filter__chapters">
+                <div class="filter__item-top">
+                    <h4 class="filter__item-title">
+                        Раздел
+                    </h4>
+                    <button class="filter__item-openCloseBtn">
+                        <img class="filter__item-openCloseBtn_img" src="/images/cross.svg"
+                            alt="Свернуть/развернуть параметр фильтра">
+                    </button>
                 </div>
 
-                <img class="discounts__item-img" src="/images/discounts/3.png" alt="Скидка 10%">
-            </div>
-        </div>
+                <ul class="filter__chapters-list filter-hidden">
+                    <li class="filter__chapters-item">
+                        <div class="filter__chapters-item_name">
+                            <input class="filter__chapters-item_checkbox" type="checkbox">
+                            <span class="filter__chapters-item_title">Фуршентные наборы</span>
+                        </div>
+                        <span class="filter__chapters-item_count">267</span>
+                    </li>
+                    <li class="filter__chapters-item">
+                        <div class="filter__chapters-item_name">
+                            <input class="filter__chapters-item_checkbox" type="checkbox">
+                            <span class="filter__chapters-item_title">Канепе</span>
+                        </div>
+                        <span class="filter__chapters-item_count">81</span>
+                    </li>
+                    <li class="filter__chapters-item">
+                        <div class="filter__chapters-item_name">
+                            <input class="filter__chapters-item_checkbox" type="checkbox">
+                            <span class="filter__chapters-item_title">Нарезки</span>
+                        </div>
+                        <span class="filter__chapters-item_count">20</span>
+                    </li>
+                    <li class="filter__chapters-item">
+                        <div class="filter__chapters-item_name">
+                            <input class="filter__chapters-item_checkbox" type="checkbox">
+                            <span class="filter__chapters-item_title">Тарталетки</span>
+                        </div>
+                        <span class="filter__chapters-item_count">29</span>
+                    </li>
+                    <li class="filter__chapters-item">
+                        <div class="filter__chapters-item_name">
+                            <input class="filter__chapters-item_checkbox" type="checkbox">
+                            <span class="filter__chapters-item_title">Готовые наборы</span>
+                        </div>
+                        <span class="filter__chapters-item_count">39</span>
+                    </li>
+
+                    <button class="filter__chapters-btn">Показать еще</button>
+                </ul>
+            </li>
+
+
+
+            <li class="filter__item filter__typeEvent">
+                <div class="filter__item-top">
+                    <h4 class="filter__item-title">
+                        Тип мероприятия
+                    </h4>
+                    <button class="filter__item-openCloseBtn">
+                        <img class="filter__item-openCloseBtn_img" src="/images/cross.svg"
+                            alt="Свернуть/развернуть параметр фильтра">
+                    </button>
+                </div>
+            </li>
+
+
+
+            <li class="filter__item filter__cuisines">
+                <div class="filter__item-top">
+                    <h4 class="filter__item-title">
+                        Кухни мира
+                    </h4>
+                    <button class="filter__item-openCloseBtn">
+                        <img class="filter__item-openCloseBtn_img" src="/images/cross.svg"
+                            alt="Свернуть/развернуть параметр фильтра">
+                    </button>
+                </div>
+            </li>
+
+
+
+            <li class="filter__item filter__composition">
+                <div class="filter__item-top">
+                    <h4 class="filter__item-title">
+                        Состав
+                    </h4>
+                    <button class="filter__item-openCloseBtn">
+                        <img class="filter__item-openCloseBtn_img" src="/images/cross.svg"
+                            alt="Свернуть/развернуть параметр фильтра">
+                    </button>
+                </div>
+            </li>
+
+
+
+            <li class="filter__item filter__sauce">
+                <div class="filter__item-top">
+                    <h4 class="filter__item-title">
+                        Соус на выбор
+                    </h4>
+                    <button class="filter__item-openCloseBtn">
+                        <img class="filter__item-openCloseBtn_img" src="/images/cross.svg"
+                            alt="Свернуть/развернуть параметр фильтра">
+                    </button>
+                </div>
+            </li>
+
+
+
+            <li class="filter__item filter__typeHoliday">
+                <div class="filter__item-top">
+                    <h4 class="filter__item-title">
+                        Тип праздника
+                    </h4>
+                    <button class="filter__item-openCloseBtn">
+                        <img class="filter__item-openCloseBtn_img" src="/images/cross.svg"
+                            alt="Свернуть/развернуть параметр фильтра">
+                    </button>
+                </div>
+            </li>
+
+
+
+            <li class="filter__item filter__numberPersons">
+                <div class="filter__item-top">
+                    <h4 class="filter__item-title">
+                        Количество персон
+                    </h4>
+                    <button class="filter__item-openCloseBtn">
+                        <img class="filter__item-openCloseBtn_img" src="/images/cross.svg"
+                            alt="Свернуть/развернуть параметр фильтра">
+                    </button>
+                </div>
+            </li>
+
+
+
+            <li class="filter__item filter__typeDish">
+                <div class="filter__item-top">
+                    <h4 class="filter__item-title">
+                        Вид блюда
+                    </h4>
+                    <button class="filter__item-openCloseBtn">
+                        <img class="filter__item-openCloseBtn_img" src="/images/cross.svg"
+                            alt="Свернуть/развернуть параметр фильтра">
+                    </button>
+                </div>
+            </li>
+
+        </ul>
     </div>
 </section>
-        <!-- /.discounts -->
+                    <!-- /.filter -->
 
-        <section class="delivery">
-    <div class="container">
-        <div class="delivery__inner">
-            <h2 class="delivery__title section-title section-title-center">Закажите доставку на дом или офис</h2>
-
-            <div class="delivery__сategories">
-                <a class="delivery__category delivery__category-1" href="">
-                    <img class="delivery__category-img" src="/images/delivery/1.png" alt="Скидки">
-                    <h3 class="delivery__category-name">Скидки</h3>
-                </a>
-                <a class="delivery__category delivery__category-2" href="">
-                    <img class="delivery__category-img" src="/images/delivery/2.png" alt="Канапе">
-                    <h3 class="delivery__category-name">Канапе</h3>
-                </a>
-                <a class="delivery__category delivery__category-3" href="">
-                    <img class="delivery__category-img" src="/images/delivery/3.png" alt="Фуршетные наборы">
-                    <h3 class="delivery__category-name">Фуршетные <br> наборы</h3>
-                </a>
-                <a class="delivery__category delivery__category-4" href="">
-                    <img class="delivery__category-img" src="/images/delivery/4.png" alt="Мини бургеры">
-                    <h3 class="delivery__category-name">Мини <br> бургеры</h3>
-                </a>
-                <a class="delivery__category delivery__category-5" href="">
-                    <img class="delivery__category-img" src="/images/delivery/5.png" alt="Веррины">
-                    <h3 class="delivery__category-name">Веррины</h3>
-                </a>
-                <a class="delivery__category delivery__category-6" href="">
-                    <img class="delivery__category-img" src="/images/delivery/6.png" alt="Тарталетки и волованы">
-                    <h3 class="delivery__category-name">Тарталетки <br> и волованы</h3>
-                </a>
-                <a class="delivery__category delivery__category-7" href="">
-                    <img class="delivery__category-img" src="/images/delivery/7.png" alt="Сэндвичи и крусаны  ">
-                    <h3 class="delivery__category-name">Сэндвичи <br> и крусаны  </h3>
-                </a>
-                <a class="delivery__category delivery__category-8" href="">
-                    <img class="delivery__category-img" src="/images/delivery/8.png" alt="Брускеты">
-                    <h3 class="delivery__category-name">Брускеты</h3>
-                </a>
-                <a class="delivery__category delivery__category-9" href="">
-                    <img class="delivery__category-img" src="/images/delivery/9.png" alt="Пирожки">
-                    <h3 class="delivery__category-name">Пирожки</h3>
-                </a>
-                <a class="delivery__category delivery__category-10" href="">
-                    <img class="delivery__category-img" src="/images/delivery/10.png" alt="Десерты">
-                    <h3 class="delivery__category-name">Десерты</h3>
-                </a>
-                <a class="delivery__category delivery__category-11" href="">
-                    <img class="delivery__category-img" src="/images/delivery/11.png" alt="Нарезка">
-                    <h3 class="delivery__category-name">Нарезка</h3>
-                </a>
-                <a class="delivery__category delivery__category-12" href="">
-                    <img class="delivery__category-img" src="/images/delivery/12.png" alt="Горячие блюда">
-                    <h3 class="delivery__category-name">Горячие блюда</h3>
-                </a>
-                <a class="delivery__category delivery__category-13" href="">
-                    <img class="delivery__category-img" src="/images/delivery/13.png" alt="Праздничные блюда">
-                    <h3 class="delivery__category-name">Праздничные <br> блюда</h3>
-                </a>
-                <a class="delivery__category delivery__category-14" href="">
-                    <img class="delivery__category-img" src="/images/delivery/14.png" alt="Корпораритивные обеды">
-                    <h3 class="delivery__category-name">Корпораритивные <br> обеды</h3>
-                </a>
-                <a class="delivery__category delivery__category-15" href="">
-                    <img class="delivery__category-img" src="/images/delivery/15.png" alt="Скидки">
-                    <h3 class="delivery__category-name">Скидки</h3>
-                </a>
-                
-            </div>
-        </div>
-    </div>
-</section>
-        <!-- /.delivery -->
-
-        <section class="new-products">
-    <div class="new-products__inner">
-        <h2 class="new-products__title section-title">Новинки</h2>
-        <div class="container">
-            
-            <div class="products__list">
+                    <div class="products__list">
 
     <a class="products__item">
         <img class="products__item-img" src="/images/new product/1.png" alt="Изображение продукта">
@@ -507,123 +577,66 @@
 </div>
 
 <a class="products__more btn" href="">Показать все</a>
-            <!-- /.products -->
-
-
-            <!-- <div class="new-products__tabs">
-
-                <div class="new-products__tabs-nav">
-                    <div class="new-products__tabs-nav_item tabs-active">Фуршетные блюда</div>
-                    <div class="new-products__tabs-nav_item">Готовые наборы</div>
-                    <div class="new-products__tabs-nav_item">Канапе</div>
-                    <div class="new-products__tabs-nav_item">Тарталетки</div>
-                    <div class="new-products__tabs-nav_item">Веррины</div>
-                    <div class="new-products__tabs-nav_item">Волованы</div>
+                    <!-- /.products -->
                 </div>
 
-                <div class="products__list">
-    
-                    <a class="products__item">
-                        <img class="products__item-img" src="/images/new product/1.png" alt="Изображение продукта">
-                        <div class="products__item-info">
-                            <div class="products__item-top">
-                                <h3 class="products__item-name">Fish'n'Cheese 40 шт.</h3>
-                                <h3 class="products__item-weight">800 гр</h3>
-                            </div>
-                            <div class="products__item-center">
-                                <div class="products__item-price">
-                                    <h3 class="products__item-oldPrice">3 710 ₽</h3>
-                                    <h3 class="products__item-newPrice">3 110 ₽</h3>
-                                </div>
-    
-                                <div class="products__item-counter">
-                                    <button class="products__item-counter_minus products__item-counter_btn">-</button>
-                                    <div class="products__item-counter_digit">1</div>
-                                    <button class="products__item-counter_plus products__item-counter_btn">+</button>
-                                </div>
-                            </div>
-                            <div class="products__item-bottom">
-                                <button class="btn products__item-btn_cart">В корзину</button>
-                                <button class="products__item-btn_like">
-                                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 1C3.239 1 1 3.216 1 5.95C1 8.157 1.875 13.395 10.488 18.69C10.6423 18.7839 10.8194 18.8335 11 18.8335C11.1806 18.8335 11.3577 18.7839 11.512 18.69C20.125 13.395 21 8.157 21 5.95C21 3.216 18.761 1 16 1C13.239 1 11 4 11 4C11 4 8.761 1 6 1Z" stroke="#454850" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
+            </div>
+
+
+            <section class="discounts">
+    <div class="container">
+        <div class="discounts__inner">
+            <div class="discounts__item">
+                <div class="discounts__item-info">
+                    <div class="discounts__item-discount">
+                        <h2 class="discounts__item-discount_percent">10%</h2>
+                        <div class="discounts__item-discount_text">
+                            Скидка
                         </div>
-                    </a>
-    
-                    <a class="products__item">
-                        <img class="products__item-img" src="/images/new product/2.png" alt="Изображение продукта">
-                        <div class="products__item-info">
-                            <div class="products__item-top">
-                                <h3 class="products__item-name">Ассорти мини бургеров</h3>
-                                <h3 class="products__item-weight">2000 гр</h3>
-                            </div>
-                            <div class="products__item-center">
-                                <div class="products__item-price">
-                                    <h3 class="products__item-oldPrice">4 850 ₽</h3>
-                                    <h3 class="products__item-newPrice">3 350 ₽</h3>
-                                </div>
-    
-                                <div class="products__item-counter">
-                                    <button class="products__item-counter_minus products__item-counter_btn">-</button>
-                                    <div class="products__item-counter_digit">1</div>
-                                    <button class="products__item-counter_plus products__item-counter_btn">+</button>
-                                </div>
-                            </div>
-                            <div class="products__item-bottom">
-                                <button class="btn products__item-btn_cart">В корзину</button>
-                                <button class="products__item-btn_like">
-                                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 1C3.239 1 1 3.216 1 5.95C1 8.157 1.875 13.395 10.488 18.69C10.6423 18.7839 10.8194 18.8335 11 18.8335C11.1806 18.8335 11.3577 18.7839 11.512 18.69C20.125 13.395 21 8.157 21 5.95C21 3.216 18.761 1 16 1C13.239 1 11 4 11 4C11 4 8.761 1 6 1Z" stroke="#454850" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </a>
-    
-                    <a class="products__item">
-                        <img class="products__item-img" src="/images/new product/3.png" alt="Изображение продукта">
-                        <div class="products__item-info">
-                            <div class="products__item-top">
-                                <h3 class="products__item-name">Набор брускетт «la mia italia» 15/20шт</h3>
-                                <h3 class="products__item-weight">600 гр</h3>
-                            </div>
-                            <div class="products__item-center">
-                                <div class="products__item-price">
-                                    <h3 class="products__item-oldPrice">4 300 ₽</h3>
-                                    <h3 class="products__item-newPrice">3 375 ₽</h3>
-                                </div>
-    
-                                <div class="products__item-counter">
-                                    <button class="products__item-counter_minus products__item-counter_btn">-</button>
-                                    <div class="products__item-counter_digit">1</div>
-                                    <button class="products__item-counter_plus products__item-counter_btn">+</button>
-                                </div>
-                            </div>
-                            <div class="products__item-bottom">
-                                <button class="btn products__item-btn_cart">В корзину</button>
-                                <button class="products__item-btn_like">
-                                    <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M6 1C3.239 1 1 3.216 1 5.95C1 8.157 1.875 13.395 10.488 18.69C10.6423 18.7839 10.8194 18.8335 11 18.8335C11.1806 18.8335 11.3577 18.7839 11.512 18.69C20.125 13.395 21 8.157 21 5.95C21 3.216 18.761 1 16 1C13.239 1 11 4 11 4C11 4 8.761 1 6 1Z" stroke="#454850" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </a>
+                    </div>
+                    <p class="discounts__item-text">
+                        Для молодожёнов
+                    </p>
                 </div>
-    
-                <a class="products__more btn" href="">Показать все</a>
-            </div> -->
 
+                <img class="discounts__item-img" src="/images/discounts/1.png" alt="Скидка 10%">
+            </div>
+            <div class="discounts__item">
+                <div class="discounts__item-info">
+                    <div class="discounts__item-discount">
+                        <h2 class="discounts__item-discount_percent">10%</h2>
+                        <div class="discounts__item-discount_text">
+                            Скидка
+                        </div>
+                    </div>
+                    <p class="discounts__item-text">
+                        Ко Дню Рождения
+                    </p>
+                </div>
 
+                <img class="discounts__item-img" src="/images/discounts/2.png" alt="Скидка 10%">
+            </div>
+            <div class="discounts__item">
+                <div class="discounts__item-info">
+                    <div class="discounts__item-discount">
+                        <h2 class="discounts__item-discount_percent">9%</h2>
+                        <div class="discounts__item-discount_text">
+                            Скидка
+                        </div>
+                    </div>
+                    <p class="discounts__item-text">
+                        На Новоселье
+                    </p>
+                </div>
+
+                <img class="discounts__item-img" src="/images/discounts/3.png" alt="Скидка 10%">
+            </div>
         </div>
     </div>
 </section>
-        <!-- /.new-products -->
+            <!-- /.discounts -->
 
-        <section class="sale">
+            <section class="sale">
     <div class="sale__inner">
         <h2 class="sale__title section-title">Распродажа</h2>
         <div class="container">
@@ -830,309 +843,8 @@
         </div>
     </div>
 </section>
-        <!-- /.sale -->
+            <!-- /.sale -->
 
-        <section class="reviews">
-    <div class="container">
-        <div class="reviews__inner">
-            <h2 class="reviews__title section-title section-title-center">Отзывы</h2>
-
-            <div class="reviews__slider slider-theme">
-
-                <div class="reviews__slider-container slider-theme__container">
-                    <div class="reviews__slider-item slider-theme__item">
-                        <div class="reviews__slider-item_rating">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                        </div>
-                        <p class="reviews__slider-item_text">
-                            Блинчики "Императорские" пришлись по вкусу всем, кто их попробовал! Одним предложением -
-                            "Пальчики оближешь". Подтверждение заказа, доставка на высшем уровне. Сервисом доволен на
-                            100%. Все очень вкусно! Так держать!
-                        </p>
-                        <div class="reviews__slider-item_info">
-                            <div class="reviews__slider-item_box">
-                                <h4 class="reviews__slider-item_name">Александр</h4>
-                                <h4 class="reviews__slider-item_date">19.07.2022</h4>
-                            </div>
-                            <a class="reviews__slider-item_more" href="">Читать полностью</a>
-                        </div>
-                    </div>
-
-                    <div class="reviews__slider-item slider-theme__item">
-                        <div class="reviews__slider-item_rating">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star-2.svg" alt="Star">
-                        </div>
-                        <p class="reviews__slider-item_text">
-                            Мы очень признательны Вашей компании. Заказывали стол для юбилея. Гости остались очень
-                            довольны, всё свежее, аккуратно упаковано и доставлено вовремя. Спасибо огромное за вашу
-                            работу!
-                        </p>
-                        <div class="reviews__slider-item_info">
-                            <div class="reviews__slider-item_box">
-                                <h4 class="reviews__slider-item_name">Владимир</h4>
-                                <h4 class="reviews__slider-item_date">30.05.2022</h4>
-                            </div>
-                            <a class="reviews__slider-item_more" href="">Читать полностью</a>
-                        </div>
-                    </div>
-
-                    <div class="reviews__slider-item slider-theme__item">
-                        <div class="reviews__slider-item_rating">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                        </div>
-                        <p class="reviews__slider-item_text">
-                            Спасибо большое за то, что освободили меня от головной боли: чем угостить коллег на день
-                            рождения))) Все было так вкусно! И красиво, красочно! Упаковка отменная, все в целости) и
-                            самый большой страх - курьер опаздывает, но нет!
-                        </p>
-                        <div class="reviews__slider-item_info">
-                            <div class="reviews__slider-item_box">
-                                <h4 class="reviews__slider-item_name">Ольга</h4>
-                                <h4 class="reviews__slider-item_date">06.06.2022</h4>
-                            </div>
-                            <a class="reviews__slider-item_more" href="">Читать полностью</a>
-                        </div>
-                    </div>
-
-                    <div class="reviews__slider-item slider-theme__item">
-                        <div class="reviews__slider-item_rating">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                        </div>
-                        <p class="reviews__slider-item_text">
-                            Блинчики "Императорские" пришлись по вкусу всем, кто их попробовал! Одним предложением -
-                            "Пальчики оближешь". Подтверждение заказа, доставка на высшем уровне. Сервисом доволен на
-                            100%. Все очень вкусно! Так держать!
-                        </p>
-                        <div class="reviews__slider-item_info">
-                            <div class="reviews__slider-item_box">
-                                <h4 class="reviews__slider-item_name">Александр</h4>
-                                <h4 class="reviews__slider-item_date">19.07.2022</h4>
-                            </div>
-                            <a class="reviews__slider-item_more" href="">Читать полностью</a>
-                        </div>
-                    </div>
-                    
-                </div>
-
-                <div class="slider-theme__navigation">
-                    <div class="slider-theme__navigation-prev reviews-slider__btn-prev slider-theme__navigation-btn"></div>
-                    <div class="slider-theme__navigation-next reviews-slider__btn-next slider-theme__navigation-btn"></div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-        <!-- /.reviews -->
-
-        <section class="advantages">
-    <div class="container">
-        <div class="advantages__inner">
-            <h2 class="advantages__title section-title section-title-center">Преимущества</h2>
-
-            <div class="advantages__group">
-                <div class="advantages__group-item">
-                    <img class="advantages__group-img" src="/images/advantages/1.svg" alt="Преимущества">
-                    <h4 class="advantages__group-title">
-                        Большой выбор блюд
-                    </h4>
-                    <p class="advantages__group-text">
-                        В нашем меню вы найдёте все, начиная от тарталеток и заканчивая готовыми наборами для бизнес-ланчей
-                    </p>
-                </div>
-                <div class="advantages__group-item">
-                    <img class="advantages__group-img" src="/images/advantages/2.svg" alt="Преимущества">
-                    <h4 class="advantages__group-title">
-                        Продукты премиального качества
-                    </h4>
-                    <p class="advantages__group-text">
-                        Мы используем исключительно свежие и качественные продукты премиум класса
-                    </p>
-                </div>
-                <div class="advantages__group-item">
-                    <img class="advantages__group-img" src="/images/advantages/3.svg" alt="Преимущества">
-                    <h4 class="advantages__group-title">
-                        Готовим перед отправкой
-                    </h4>
-                    <p class="advantages__group-text">
-                        Блюда никогда не разогреваються, а готовятся сразу после получения заказа
-                    </p>
-                </div>
-                <div class="advantages__group-item">
-                    <img class="advantages__group-img" src="/images/advantages/4.svg" alt="Преимущества">
-                    <h4 class="advantages__group-title">
-                        Доставим в любое место
-                    </h4>
-                    <p class="advantages__group-text">
-                        Быстрая доствка со строгими нормами и правилами, помогает сохранить все свойства, ароматы и вкусовые качества продуктов
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        <!-- /.advantages -->
-
-        <section class="news">
-    <div class="container">
-        <div class="news__inner">
-            <h2 class="news__title section-title section-title-center">Новости</h2>
-
-            <div class="news__slider slider-theme">
-                <div class="news__slider-container slider-theme__container">
-                    <div class="news__slider-item slider-theme__item">
-                        <img class="news__slider-item_img" src="/images/news/1.png" alt="Новости">
-                        <div class="news__slider-item_info">
-                            <h4 class="news__slider-item_title">
-                                Какой он, идеальный завтрак?
-                            </h4>
-                            <p class="news__slider-item_text">
-                                Не все по утрам выбирают полноценный завтрак. Многие люди ограничиваются чашкой кофе или
-                                чая. Придя на работу, в руках снова оказывается кофе с шоколадкой, но вот заряда
-                                бодрости явно не ощущается.
-                            </p>
-
-                            <div class="news__slider-item_bottom">
-                                <h4 class="news__slider-item_date">
-                                    22.06.2022
-                                </h4>
-                                <a class="news__slider-item_more" href="">Читать полностью</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="news__slider-item slider-theme__item">
-                        <img class="news__slider-item_img" src="/images/news/2.png" alt="Новости">
-                        <div class="news__slider-item_info">
-                            <h4 class="news__slider-item_title">
-                                Фуршет с минимальными затратами
-                            </h4>
-                            <p class="news__slider-item_text">
-                                В сравнении с банкетом фуршет может варьироваться по стоимости: его можно сделать как
-                                очень бюджетным, так и роскошным. Неважно, собираетесь вы готовить еду сами или
-                                заказывать, больших затрат можно избежать.
-                            </p>
-
-                            <div class="news__slider-item_bottom">
-                                <h4 class="news__slider-item_date">
-                                    13.07.2022
-                                </h4>
-                                <a class="news__slider-item_more" href="">Читать полностью</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="news__slider-item slider-theme__item">
-                        <img class="news__slider-item_img" src="/images/news/3.png" alt="Новости">
-                        <div class="news__slider-item_info">
-                            <h4 class="news__slider-item_title">
-                                Как организовать пикник на природе?
-                            </h4>
-                            <p class="news__slider-item_text">
-                                В летний сезон не хочется сидеть дома. Когда на улице тепло, самое время устроить
-                                пикник. Это прекрасная возможность отдохнуть в компании друзей и близких на свежем
-                                воздухе. Конечно, для этого нужно взять с собой готовые блюда или продукты...
-                            </p>
-
-                            <div class="news__slider-item_bottom">
-                                <h4 class="news__slider-item_date">
-                                    12.02.2022
-                                </h4>
-                                <a class="news__slider-item_more" href="">Читать полностью</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="news__slider-item slider-theme__item">
-                        <img class="news__slider-item_img" src="/images/news/1.png" alt="Новости">
-                        <div class="news__slider-item_info">
-                            <h4 class="news__slider-item_title">
-                                Какой он, идеальный завтрак?
-                            </h4>
-                            <p class="news__slider-item_text">
-                                Не все по утрам выбирают полноценный завтрак. Многие люди ограничиваются чашкой кофе или
-                                чая. Придя на работу, в руках снова оказывается кофе с шоколадкой, но вот заряда
-                                бодрости явно не ощущается.
-                            </p>
-
-                            <div class="news__slider-item_bottom">
-                                <h4 class="news__slider-item_date">
-                                    22.06.2022
-                                </h4>
-                                <a class="news__slider-item_more" href="">Читать полностью</a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="slider-theme__navigation">
-                    <div class="slider-theme__navigation-prev news-slider__btn-prev slider-theme__navigation-btn"></div>
-                    <div class="slider-theme__navigation-next news-slider__btn-next slider-theme__navigation-btn"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        <!-- /.news -->
-
-        <div class="bgInner">
-            <section class="howOrder">
-    <div class="container">
-        <div class="howOrder__inner">
-
-            <h2 class="howOrder__title section-title section-title-center">Как заказать</h2>
-
-            <div class="howOrder__steps">
-                <div class="howOrder__steps-step">
-                    <span class="howOrder__steps-step_number">1</span>
-                    <p class="howOrder__steps-step_text">
-                        Выбрать в каталоге нужный товар и его количетсво
-                    </p>
-                </div>
-
-                 <div class="howOrder__steps-step">
-                    <span class="howOrder__steps-step_number">2</span>
-                    <p class="howOrder__steps-step_text">
-                        Добавить в корзину и перейти к оформлению заказа
-                    </p>
-                </div>
-
-                 <div class="howOrder__steps-step">
-                    <span class="howOrder__steps-step_number">3</span>
-                    <p class="howOrder__steps-step_text">
-                        Олатить наиболее удобным для вас способом
-                    </p>
-                </div>
-
-                 <div class="howOrder__steps-step">
-                    <span class="howOrder__steps-step_number">4</span>
-                    <p class="howOrder__steps-step_text">
-                        Ожидать быструю доставку вашего заказа
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-            <!-- /.howOrder -->
-            
             <section class="payment-delivery">
 
     <h2 class="payment-delivery__title section-title section-title-center">Оплата и доставка</h2>
@@ -1192,76 +904,11 @@
 
 </section>
             <!-- /.payment-delivery -->
-        </div>
 
+        </main>
+        <!-- /.main -->
 
-        <section class="clients">
-    <div class="container">
-        <div class="clients__inner">
-            <h2 class="clients__title section-title section-title-center">Наши клиенты</h2>
-
-            <div class="clients__slider slider-theme">
-                <div class="clients__slider-container slider-theme__container">
-                    <div class="clients__slider-item slider-theme__item">
-                        <img class="clients__slider-item_img" src="/images/clients/1.png" alt="Клиенты">
-                    </div>
-
-                    <div class="clients__slider-item slider-theme__item">
-                        <img class="clients__slider-item_img" src="/images/clients/2.png" alt="Клиенты">
-                    </div>
-
-                    <div class="clients__slider-item slider-theme__item">
-                        <img class="clients__slider-item_img" src="/images/clients/3.png" alt="Клиенты">
-                    </div>
-
-                    <div class="clients__slider-item slider-theme__item">
-                        <img class="clients__slider-item_img" src="/images/clients/4.png" alt="Клиенты">
-                    </div>
-
-                    <div class="clients__slider-item slider-theme__item">
-                        <img class="clients__slider-item_img" src="/images/clients/5.png" alt="Клиенты">
-                    </div>
-
-                    <div class="clients__slider-item slider-theme__item">
-                        <img class="clients__slider-item_img" src="/images/clients/6.png" alt="Клиенты">
-                    </div>
-
-                    <div class="clients__slider-item slider-theme__item">
-                        <img class="clients__slider-item_img" src="/images/clients/7.png" alt="Клиенты">
-                    </div>
-
-                    <div class="clients__slider-item slider-theme__item">
-                        <img class="clients__slider-item_img" src="/images/clients/8.png" alt="Клиенты">
-                    </div>
-
-                    <div class="clients__slider-item slider-theme__item">
-                        <img class="clients__slider-item_img" src="/images/clients/1.png" alt="Клиенты">
-                    </div>
-
-                    <div class="clients__slider-item slider-theme__item">
-                        <img class="clients__slider-item_img" src="/images/clients/2.png" alt="Клиенты">
-                    </div>
-
-                    <div class="clients__slider-item slider-theme__item">
-                        <img class="clients__slider-item_img" src="/images/clients/3.png" alt="Клиенты">
-                    </div>
-
-                </div>
-
-                <div class="slider-theme__navigation">
-                    <div class="slider-theme__navigation-prev clients-slider__btn-prev slider-theme__navigation-btn"></div>
-                    <div class="slider-theme__navigation-next clients-slider__btn-next slider-theme__navigation-btn"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-        <!-- /.clients -->
-
-    </main>
-    <!-- /.main -->
-
-    <section class="mobMenu">
+        <section class="mobMenu">
     <div class="mobMenu__container">
 
         <div class="mobMenu__btn-box">
@@ -1381,9 +1028,9 @@
 
     </div>
 </section>
-    <!-- /.mobMenu -->
+        <!-- /.mobMenu -->
 
-    <footer class="footer">
+        <footer class="footer">
     <div class="container">
         <div class="footer__inner">
 
@@ -1615,14 +1262,14 @@
         </div>
     </div>
 </footer>
-    <!-- /.footer -->
-      
-  </div>
-  <!-- /.wrapper -->
-  
-  <script src="js/jquery-3.6.1.min.js"></script>
-  <script src="js/slick.min.js"></script>
-  <script src="js/main.min.js"></script>
+        <!-- /.footer -->
+
+    </div>
+    <!-- /.wrapper -->
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 
 </html>

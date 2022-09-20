@@ -5,11 +5,13 @@
 @import 'settings/libs';
 @import 'settings/global';
 @import 'settings/slider';
+@import 'settings/breadcrumbs';
 
 //common blocks
 @import '../blocks/header/header';
 @import '../blocks/footer/footer';
 @import '../blocks/mobMenu/mobMenu';
+@import '../blocks/products/products';
 
 //main page blocks
 @import '../blocks/promo/promo';
@@ -23,3 +25,6 @@
 @import '../blocks/howOrder/howOrder';
 @import '../blocks/payment-delivery/payment-delivery';
 @import '../blocks/clients/clients';
+
+//all dishes page blocks
+@import '../blocks/filter/filter';
