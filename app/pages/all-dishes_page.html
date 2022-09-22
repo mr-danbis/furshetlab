@@ -31,8 +31,36 @@
                     @@include('../blocks/filter/filter.html')
                     <!-- /.filter -->
 
-                    @@include('../blocks/products/products.html')
-                    <!-- /.products -->
+                    <div class="package__block">
+
+                        @@include('../blocks/sortCountView/sortCountView.html')
+                        <!-- /.sortCountView -->
+
+
+
+                        <div class="product__slider">
+                            <div class="product__slider-list">
+                                <div class="product__slider-item">
+                                    @@include('../blocks/products/products.html')
+                                    <!-- /.products -->
+                                </div>
+                                <div class="product__slider-item">
+                                    @@include('../blocks/products/products.html')
+                                    <!-- /.products -->
+                                </div>
+                                <div class="product__slider-item">
+                                    @@include('../blocks/products/products.html')
+                                    <!-- /.products -->
+                                </div>
+                            </div>
+
+                            <div class="slider-theme__navigation">
+                                <div class="slider-theme__navigation-prev product-slider__btn-prev slider-theme__navigation-btn"></div>
+                                <div class="slider-theme__navigation-next product-slider__btn-next slider-theme__navigation-btn"></div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>

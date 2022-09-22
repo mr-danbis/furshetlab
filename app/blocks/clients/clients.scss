@@ -1,6 +1,4 @@
 .clients {
-    @include adaptiv-marginBottom(200, 100);
-
     &__slider {
         &-item {
             height: 120px !important;

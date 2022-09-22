@@ -157,6 +157,18 @@
         &-link {
             color: inherit;
             @include adaptiv-font(18,9);
+            &--list{
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: url(/images/arrow-bottom.svg);
+                    right: -20px;
+                }
+            }
+        }
+
+        &-sublist{
+            display: none;
         }
     }
 }

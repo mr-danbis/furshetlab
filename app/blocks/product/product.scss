@@ -1,0 +1,184 @@
+.product {
+    @include adaptiv-marginBottom(150, 75);
+
+    &__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        margin-right: 20%;
+    }
+
+    &__share-btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-left: 36px;
+        font-size: 18px;
+        color: #454850;
+
+        &::before {
+            position: absolute;
+            content: url(/images/share.svg);
+            left: 0;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__gallery {
+        width: 60%;
+        display: flex;
+        align-items: start;
+
+        &-small {
+            margin-right: 40px;
+
+            &>img:first-child {
+                margin-bottom: 40px;
+            }
+        }
+
+        &-main{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            &::after{
+                position: absolute;
+                content: url(/images/like-icon-white.svg);
+                top: 45px;
+                right: 45px;
+            }
+            &_bottom{
+                font-family: 'OrchideaProBold';
+                color: #FAF6F0;
+                font-size: 18px;
+                width: 90%;
+                margin: auto;
+                position: absolute;
+                bottom: 40px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__description {
+        width: 35%;
+
+        &>.products__item-center {
+            justify-content: start;
+
+            &>.products__item-price {
+                margin-right: 10%;
+            }
+        }
+
+        &-top {
+            margin-bottom: 40px;
+            display: flex;
+            align-items: top;
+            justify-content: space-between;
+        }
+
+        &-rating {
+            &_stars {
+                margin-bottom: 10px;
+                display: flex;
+
+                &>img:not(:last-child) {
+                    margin-right: 14px;
+                }
+            }
+
+            &>span {
+                font-family: 'OrchideaProBold';
+                font-size: 18px;
+                color: rgba(69, 72, 80, 0.5);
+            }
+        }
+
+        &-tags {
+            margin-top: 10px;
+
+            &_discount {
+                background-color: #E64732;
+                border-radius: 20px;
+                font-size: 15px;
+                color: #FAF6F0;
+                font-family: 'OrchideaProBold';
+                padding: 10px 15px;
+                margin-right: 35px;
+            }
+
+            &_new {
+                background-color: #83EC52;
+                border-radius: 20px;
+                font-size: 15px;
+                color: #454850;
+                font-family: 'OrchideaProBold';
+                padding: 10px 15px;
+            }
+        }
+
+
+        &-navigation {
+            margin-bottom: 20px;
+
+            &_btn {
+                color: rgba(69, 72, 80, 0.5);
+                font-size: 18px;
+                font-family: 'OrchideaProBold';
+
+                &--active {
+                    color: #454850;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+            }
+        }
+
+        &-text {
+            width: 80%;
+            font-size: 18px;
+            line-height: 130%;
+            margin-bottom: 38px;
+        }
+
+        &-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &_btn {
+                width: 40%;
+            }
+
+            &_bonus {
+                font-family: 'OrchideaProBold';
+                font-size: 18px;
+                color: rgba(69, 72, 80, 0.5);
+                width: 30%;
+                padding-right: 32px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                &::after{
+                    position: absolute;
+                    right: 0;
+                    width: 24px;
+                    height: 24px;
+                    content: url(/images/bonus-descr.svg);
+                }
+            }
+        }
+
+    }
+}

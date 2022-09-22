@@ -65,6 +65,8 @@ function build() {
     'app/*.html',
     'app/css/style.min.css',
     'app/js/main.min.js',
+    'app/js/slick.min.js',
+    'app/js/jquery-3.6.1.min.js',
     'app/fonts/**/*',
     // 'app/favicon.ico'
   ], {base: 'app'})

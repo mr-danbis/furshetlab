@@ -86,6 +86,7 @@
             @include adaptiv-font(22,18);
             width: 75%;
             height: 60px;
+            color: #454850;
         }
         &-weight{
             font-family: 'OrchideaProBold';
@@ -227,11 +228,10 @@
 
 
 
-.package > .products__list{
+.package > .package__block > .product__slider > .product__slider-list >.slick-list > .slick-track > .product__slider-item > .products__list{
     grid-template-columns: repeat(2, 1fr);
-    width: 70%;
 }
 
-.package > .products__more{
+.package > .package__block > .product__slider > .product__slider-list > .slick-list > .slick-track > .product__slider-item > .products__more{
     display: none;
 }

@@ -63,6 +63,12 @@ $(document).ready(function () {
     openMobileSidebar();
 
 
+    $('.product__slider-list').slick({
+        slidesToShow: 1,
+        infinite: false,
+        prevArrow: $('.product-slider__btn-prev'),
+        nextArrow: $('.product-slider__btn-next'),
+    });
 
 
     $('.reviews__slider-container').slick({
@@ -141,7 +147,7 @@ $(document).ready(function () {
             }
         ]
     });
-    
+
 
 
 
@@ -192,5 +198,14 @@ $(document).ready(function () {
         }
 
     };
+
+
+
+
+
+    const wrapper = qs('.wrapper');
+    if(wrapper.classList.contains('product-page')){
+        wrapper.querySelector('.new-products__title').innerHTML = 'Другие варианты';
+    }
 
 });
