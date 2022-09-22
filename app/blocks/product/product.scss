@@ -44,17 +44,19 @@
             }
         }
 
-        &-main{
+        &-main {
             position: relative;
             display: flex;
             justify-content: center;
-            &::after{
+
+            &::after {
                 position: absolute;
                 content: url(/images/like-icon-white.svg);
                 top: 45px;
                 right: 45px;
             }
-            &_bottom{
+
+            &_bottom {
                 font-family: 'OrchideaProBold';
                 color: #FAF6F0;
                 font-size: 18px;
@@ -70,6 +72,19 @@
 
     &__description {
         width: 35%;
+
+        &-none {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            &_text{
+                width: 55%;
+                font-family: 'OrchideaProBold';
+                font-size: 18px;
+                margin-bottom: 40px;
+                line-height: 130%;
+            }
+        }
 
         &>.products__item-center {
             justify-content: start;
@@ -159,7 +174,8 @@
 
             &_btn {
                 width: 40%;
-                &:hover{
+
+                &:hover {
                     background-color: $background1Color;
                 }
             }
@@ -173,7 +189,8 @@
                 position: relative;
                 display: flex;
                 align-items: center;
-                &::after{
+
+                &::after {
                     position: absolute;
                     right: 0;
                     width: 24px;

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../blocks/head/head.html')
+
+<body>
+    <div class="wrapper product-page">
+
+        @@include('../blocks/header/header.html')
+        <!-- /.header -->
+
+        <main class="main">
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="/">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="">Все блюда</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="">Фуршетные наборы</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="">Блинчики</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs__link--active" href="">Блины «Императорские» 24 шт</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            @@include('../blocks/product/product-none.html')
+            <!-- /.product-none -->
+
+            @@include('../blocks/payment-delivery/payment-delivery.html')
+            <!-- /.payment-delivery -->
+
+            @@include('../blocks/new-products/new-products.html')
+            <!-- /.new-products -->
+
+            @@include('../blocks/reviews/reviews.html')
+            <!-- /.reviews -->
+
+
+        </main>
+        <!-- /.main -->
+
+        @@include('../blocks/mobMenu/mobMenu.html')
+        <!-- /.mobMenu -->
+
+        @@include('../blocks/footer/footer.html')
+        <!-- /.footer -->
+
+    </div>
+    <!-- /.wrapper -->
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
