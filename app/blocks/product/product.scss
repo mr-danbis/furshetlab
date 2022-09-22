@@ -159,6 +159,9 @@
 
             &_btn {
                 width: 40%;
+                &:hover{
+                    background-color: $background1Color;
+                }
             }
 
             &_bonus {
