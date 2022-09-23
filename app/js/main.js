@@ -207,5 +207,8 @@ $(document).ready(function () {
     if(wrapper.classList.contains('product-page')){
         wrapper.querySelector('.new-products__title').innerHTML = 'Другие варианты';
     }
+    if(wrapper.classList.contains('cart-page')){
+        wrapper.querySelector('.new-products__title').innerHTML = 'Распродажа';
+    }
 
 });

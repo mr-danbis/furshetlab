@@ -11,15 +11,69 @@ body {
     width: 100vw;
 }
 
-.package{
+.package {
     display: flex;
     justify-content: space-between;
     margin-bottom: 150px;
-    &__block{
+
+    &__block {
         width: 70%;
         display: flex;
         flex-direction: column;
     }
+}
+
+.share-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 36px;
+    font-size: 18px;
+    color: #454850;
+    transition: all .3s;
+
+    &::before {
+        position: absolute;
+        content: url(/images/share.svg);
+        left: 0;
+    }
+
+    &:hover {
+        color: #DBC09E;
+    }
+}
+
+.backToShop-btn {
+    font-size: 18px;
+    color: #454850;
+    transition: all .3s;
+
+    &:hover {
+        color: #DBC09E;
+    }
+}
+
+.clearCart-btn {
+    font-size: 18px;
+    color: #E35151;
+    position: relative;
+    padding-left: 15px;
+    transition: all .3s;
+
+    &:hover {
+        opacity: .5;
+    }
+
+    &::before {
+        left: 0;
+        position: absolute;
+        content: url(/images/cross-delete.svg);
+
+    }
+}
+
+.page-title {
+    margin-bottom: 40px;
 }
 
 .bgInner {
@@ -83,11 +137,11 @@ body {
         font-family: 'OrchideaProSemiBold';
         font-size: 45px;
         color: #454850;
-        @include adaptiv-marginBottom(70,35);
+        @include adaptiv-marginBottom(70, 35);
     }
 
-    &--all-dishes{
-        & > .discounts {
+    &--all-dishes {
+        &>.discounts {
             margin-top: 0;
         }
     }

@@ -11,21 +11,6 @@
         margin-right: 20%;
     }
 
-    &__share-btn {
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding-left: 36px;
-        font-size: 18px;
-        color: #454850;
-
-        &::before {
-            position: absolute;
-            content: url(/images/share.svg);
-            left: 0;
-        }
-    }
-
     &__info {
         display: flex;
         justify-content: space-between;

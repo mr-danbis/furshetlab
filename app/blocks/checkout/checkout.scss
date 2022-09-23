@@ -1,0 +1,97 @@
+.checkout {
+    &__inner {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    &__column {
+        width: 40%;
+
+        &:first-child {
+            &>.checkout__title {
+                margin-bottom: 78px;
+            }
+        }
+
+        &:last-child {
+            &>.checkout__title {
+                margin-bottom: 30px;
+            }
+        }
+
+        &:last-child {
+            width: 45%;
+        }
+
+        & > .cart-product{
+            padding-top: 20px;
+            border-top: 1px solid rgba(69, 72, 80, 0.2);
+            & > .cart-product__inner > .cart-product__main > .cart-product__info {
+                padding-right: 0;
+                width: 65%;
+                position: relative;
+                & > .cart-product__info-top{
+                    margin-bottom: 60px;
+                }
+                & > .products__item-center{
+                    margin-bottom: 0;
+                    justify-content: start;
+                    & > .cart-product__delete-product{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                }
+            }
+            .cart-product__img{
+                object-fit: cover;
+                border-radius: 50px;
+                width: 30%;
+            }
+        }
+
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-item {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            &_title {
+                width: 35%;
+                font-size: 18px;
+                font-family: 'OrchideaProSemiBold';
+            }
+            &_input{
+                outline: none;
+                width: 55%;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid rgba(69, 72, 80, 0.5);
+            }
+        }
+
+        &-radio{
+            &_btns{
+                width: 55%;
+                display: flex;
+            }
+            &_item{
+                margin-right: 35px;
+            }
+        }
+
+        &-btn{
+            padding: 25px 57px;
+            &:hover{
+            background-color: transparent;
+        }
+        }
+    }
+}

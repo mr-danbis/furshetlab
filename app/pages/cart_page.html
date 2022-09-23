@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../blocks/head/head.html')
+
+<body>
+    <div class="wrapper cart-page">
+
+        @@include('../blocks/header/header.html')
+        <!-- /.header -->
+
+        <main class="main">
+
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="/">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs__link--active" href="cart_page.html">Корзина</a>
+                        </li>
+                    </ul>
+                </nav>
+                <h1 class="page-title section-title">
+                    Ваша корзина
+                </h1>
+
+
+                <section class="cart">
+                    <div class="cart__options">
+                        <button class="share-btn">Поделиться корзиной</button>
+                        <a class="backToShop-btn" href="all-dishes_page.html">Вернутся к покупкам</a>
+                        <button class="clearCart-btn">Очистить корзину</button>
+                    </div>
+
+
+                    @@include('../blocks/cart/cart-product.html')
+                    <!-- /.cart-product -->
+
+                    <div class="cart__addition">
+                        <div class="cart__price">
+                            <h3 class="cart__price-title">
+                                СУММА ЗАКАЗА:
+                            </h3>
+                            <h3 class="cart__price-digit">
+                                <span>5 270</span> ₽
+                            </h3>
+                        </div>
+
+                        <div class="cart__bonus">
+                            <form class="cart__bonus-form">
+                                <input class="cart__bonus-input cart__addition-input" placeholder="Кол-во бонусных ₽"
+                                    type="text" name="bonus">
+                                <button class="cart__bonus-btn cart__addition-btn">
+                                    <svg width="25" height="16" viewBox="0 0 25 16" fill="#454850" fill-opacity="0.5"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M24.7071 8.70711C25.0976 8.31658 25.0976 7.68342 24.7071 7.29289L18.3431 0.928932C17.9526 0.538408 17.3195 0.538408 16.9289 0.928932C16.5384 1.31946 16.5384 1.95262 16.9289 2.34315L22.5858 8L16.9289 13.6569C16.5384 14.0474 16.5384 14.6805 16.9289 15.0711C17.3195 15.4616 17.9526 15.4616 18.3431 15.0711L24.7071 8.70711ZM0 9H24V7H0V9Z"
+                                            />
+                                    </svg>
+                                </button>
+                            </form>
+                            <p class="cart__bonus-description">
+                                У вас <strong><span>500</span> бонусных рублей</strong>. Вы можете оплатить ими до 50%
+                                заказа
+                            </p>
+                        </div>
+
+
+                        <div class="cart__promo">
+                            <form class="cart__promo-form">
+                                <input class="cart__promo-input cart__addition-input" placeholder="Введите промокод"
+                                    type="text" name="promo">
+                                <button class="cart__promo-btn cart__addition-btn">
+                                    <svg width="25" height="16" viewBox="0 0 25 16" fill="#454850" fill-opacity="0.5"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M24.7071 8.70711C25.0976 8.31658 25.0976 7.68342 24.7071 7.29289L18.3431 0.928932C17.9526 0.538408 17.3195 0.538408 16.9289 0.928932C16.5384 1.31946 16.5384 1.95262 16.9289 2.34315L22.5858 8L16.9289 13.6569C16.5384 14.0474 16.5384 14.6805 16.9289 15.0711C17.3195 15.4616 17.9526 15.4616 18.3431 15.0711L24.7071 8.70711ZM0 9H24V7H0V9Z"
+                                            />
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+
+
+                        <a class="cart__btn btn" href="checkout_page.html">Оформить заказ</a>
+
+
+                    </div>
+                </section>
+
+            </div>
+
+
+            @@include('../blocks/new-products/new-products.html')
+            <!-- /.new-products -->
+
+            @@include('../blocks/payment-delivery/payment-delivery.html')
+            <!-- /.payment-delivery -->
+
+
+        </main>
+        <!-- /.main -->
+
+        @@include('../blocks/mobMenu/mobMenu.html')
+        <!-- /.mobMenu -->
+
+        @@include('../blocks/footer/footer.html')
+        <!-- /.footer -->
+
+    </div>
+    <!-- /.wrapper -->
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

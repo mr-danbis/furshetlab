@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="wrapper product-page">
+    <div class="wrapper cart-page">
 
         <header class="header">
     <div class="header__top">
@@ -105,9 +105,9 @@
                         <img src="/images/like-icon.svg" alt="Нравится">
                     </button>
     
-                     <button class="header__center-btn header__center-btn_cart">
+                     <a class="header__center-btn header__center-btn_cart" href="cart_page.html">
                         <img src="/images/cart-icon.svg" alt="Добавить в корзину">
-                    </button>
+                    </a>
                 </div>
     
     
@@ -171,6 +171,7 @@
         <!-- /.header -->
 
         <main class="main">
+
             <div class="container">
                 <nav class="breadcrumbs">
                     <ul class="breadcrumbs__list">
@@ -178,157 +179,116 @@
                             <a class="breadcrumbs__link" href="/">Главная</a>
                         </li>
                         <li class="breadcrumbs__item">
-                            <a class="breadcrumbs__link" href="">Все блюда</a>
-                        </li>
-                        <li class="breadcrumbs__item">
-                            <a class="breadcrumbs__link" href="">Фуршетные наборы</a>
-                        </li>
-                        <li class="breadcrumbs__item">
-                            <a class="breadcrumbs__link" href="">Блинчики</a>
-                        </li>
-                        <li class="breadcrumbs__item">
-                            <a class="breadcrumbs__link breadcrumbs__link--active" href="">Блины «Императорские» 24 шт</a>
+                            <a class="breadcrumbs__link breadcrumbs__link--active" href="cart_page.html">Корзина</a>
                         </li>
                     </ul>
                 </nav>
-            </div>
+                <h1 class="page-title section-title">
+                    Ваша корзина
+                </h1>
 
-            <section class="product">
-    <div class="container">
-        <div class="product__inner">
-            <div class="product__top">
-                <div class="product__title section-title">Блины «Императорские» 24 шт.</div>
-                <button class="product__share-btn">Поделиться</button>
-            </div>
 
-            <div class="product__info">
-                <div class="product__gallery">
-                    <div class="product__gallery-small">
-                        <img src="/images/product/2.png" alt="Блины «Императорские» 24 шт.">
-                        <img src="/images/product/3.png" alt="Блины «Императорские» 24 шт.">
+                <section class="cart">
+                    <div class="cart__options">
+                        <button class="share-btn">Поделиться корзиной</button>
+                        <a class="backToShop-btn" href="all-dishes_page.html">Вернутся к покупкам</a>
+                        <button class="clearCart-btn">Очистить корзину</button>
                     </div>
-                    <div class="product__gallery-main">
-                        <img src="/images/product/1.png" alt="Блины «Императорские» 24 шт.">
-                        <p class="product__gallery-main_bottom">
-                            <span>Арт. 2307</span>
-                            <span>1320 гр</span>
-                        </p>
-                    </div>
+
+
+                    <div class="cart-product">
+    <div class="cart-product__inner">
+        <div class="cart-product__main">
+            <img class="cart-product__img" src="/images/cart-product.png" alt="Фото вашего заказа">
+            <div class="cart-product__info">
+                <div class="cart-product__info-top">
+                    <a class="cart-product__info-top_title" href="product_page.html">Блины «Императорские» 24 шт.</a>
+                    <span class="cart-product__info-top_descr">
+                        Масса, гр: 1320
+                    </span>
                 </div>
-
-                <div class="product__description">
-                    <div class="product__description-top">
-                        <div class="product__description-rating">
-                            <div class="product__description-rating_stars">
-                                <img src="/images/star.svg" alt="Рейтинг блюда">
-                                <img src="/images/star.svg" alt="Рейтинг блюда">
-                                <img src="/images/star.svg" alt="Рейтинг блюда">
-                                <img src="/images/star.svg" alt="Рейтинг блюда">
-                                <img src="/images/star.svg" alt="Рейтинг блюда">
-                            </div>
-                            <span>1 отзыв</span>
-                        </div>
-
-                        <div class="product__description-tags">
-                            <span class="product__description-tags_discount">21%</span>
-                            <span class="product__description-tags_new">Новинка</span>
-                        </div>
+                <div class="products__item-center">
+                    <div class="products__item-price">
+                        <h3 class="products__item-oldPrice">6 620 ₽</h3>
+                        <h3 class="products__item-newPrice">5 270 ₽</h3>
                     </div>
 
-                    <div class="products__item-center">
-                        <div class="products__item-price">
-                            <h3 class="products__item-oldPrice">4 850 ₽</h3>
-                            <h3 class="products__item-newPrice">3 350 ₽</h3>
-                        </div>
-
-                        <div class="products__item-counter">
-                            <button class="products__item-counter_minus products__item-counter_btn">-</button>
-                            <div class="products__item-counter_digit">1</div>
-                            <button class="products__item-counter_plus products__item-counter_btn">+</button>
-                        </div>
+                    <div class="products__item-counter">
+                        <button class="products__item-counter_minus products__item-counter_btn">-</button>
+                        <div class="products__item-counter_digit">1</div>
+                        <button class="products__item-counter_plus products__item-counter_btn">+</button>
                     </div>
 
-                    <div class="product__description-navigation">
-                        <button class="product__description-navigation_btn product__description-navigation_btn--active">Описание</button>
-                        <button class="product__description-navigation_btn">Состав</button>
-                    </div>
-
-
-                    <p class="product__description-text">
-                        Тонкие блины с нежным сыром «Креметте», красной рыбой и красной икрой – изысканное угощение для вашего праздника. Лимон и укроп придают блюду пикантные свежие нотки. Это идеальное блюдо для любого семейного праздника или дружеского застолья. Блины хороши и к новогоднему столу, и на Масленицу, и на любой другой праздник. А главное – вам не нужно заниматься готовкой и подачей. Блины изящно сервированы – ваши гости по достоинству оценят элегантность и тонкий вкус блюда.
+                    <button class="cart-product__delete-product">
+                        <img class="cart-product__delete-product_img" src="/images/cross-cart.svg"
+                            alt="Удалить товар из корзины">
+                    </button>
+                </div>
+                <div class="cart-product__info-bottom">
+                    <p class="cart-product__info-bottom_text">
+                        Блюда доставляются в крафтовых упаковках в охлажденном виде. Упаковка может отличаться от представленной на фото
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                    <!-- /.cart-product -->
 
-                    <div class="product__description-bottom">
-                        <button class="btn products__item-btn_cart product__description-bottom_btn">В корзину</button>
-                        <span class="product__description-bottom_bonus">+159 бонусных рублей</span>
+                    <div class="cart__addition">
+                        <div class="cart__price">
+                            <h3 class="cart__price-title">
+                                СУММА ЗАКАЗА:
+                            </h3>
+                            <h3 class="cart__price-digit">
+                                <span>5 270</span> ₽
+                            </h3>
+                        </div>
+
+                        <div class="cart__bonus">
+                            <form class="cart__bonus-form">
+                                <input class="cart__bonus-input cart__addition-input" placeholder="Кол-во бонусных ₽"
+                                    type="text" name="bonus">
+                                <button class="cart__bonus-btn cart__addition-btn">
+                                    <svg width="25" height="16" viewBox="0 0 25 16" fill="#454850" fill-opacity="0.5"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M24.7071 8.70711C25.0976 8.31658 25.0976 7.68342 24.7071 7.29289L18.3431 0.928932C17.9526 0.538408 17.3195 0.538408 16.9289 0.928932C16.5384 1.31946 16.5384 1.95262 16.9289 2.34315L22.5858 8L16.9289 13.6569C16.5384 14.0474 16.5384 14.6805 16.9289 15.0711C17.3195 15.4616 17.9526 15.4616 18.3431 15.0711L24.7071 8.70711ZM0 9H24V7H0V9Z"
+                                            />
+                                    </svg>
+                                </button>
+                            </form>
+                            <p class="cart__bonus-description">
+                                У вас <strong><span>500</span> бонусных рублей</strong>. Вы можете оплатить ими до 50%
+                                заказа
+                            </p>
+                        </div>
+
+
+                        <div class="cart__promo">
+                            <form class="cart__promo-form">
+                                <input class="cart__promo-input cart__addition-input" placeholder="Введите промокод"
+                                    type="text" name="promo">
+                                <button class="cart__promo-btn cart__addition-btn">
+                                    <svg width="25" height="16" viewBox="0 0 25 16" fill="#454850" fill-opacity="0.5"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M24.7071 8.70711C25.0976 8.31658 25.0976 7.68342 24.7071 7.29289L18.3431 0.928932C17.9526 0.538408 17.3195 0.538408 16.9289 0.928932C16.5384 1.31946 16.5384 1.95262 16.9289 2.34315L22.5858 8L16.9289 13.6569C16.5384 14.0474 16.5384 14.6805 16.9289 15.0711C17.3195 15.4616 17.9526 15.4616 18.3431 15.0711L24.7071 8.70711ZM0 9H24V7H0V9Z"
+                                            />
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+
+
+                        <a class="cart__btn btn" href="checkout_page.html">Оформить заказ</a>
+
+
                     </div>
+                </section>
 
-                </div>
             </div>
-        </div>
-    </div>
-</section>
-            <!-- /.product -->
 
-            <section class="payment-delivery">
-
-    <h2 class="payment-delivery__title section-title section-title-center">Оплата и доставка</h2>
-
-    <div class="payment-delivery__inner">
-        <img class="payment-delivery__img" src="/images/payment-delivery.png" alt="Оплата и доставка">
-
-        <div class="payment-delivery__info">
-            <div class="payment-delivery__columns">
-                <div class="payment-delivery__column">
-                    <h4 class="payment-delivery__column-title">
-                        Оплата
-                    </h4>
-
-                    <ul class="payment-delivery__column-list">
-                        <li class="payment-delivery__column-item">
-                            Наличными курьеру
-                        </li>
-                        <li class="payment-delivery__column-item">
-                            Безналичный расчет
-                        </li>
-                        <li class="payment-delivery__column-item">
-                            Оплата через терминалы и салоны связи
-                        </li>
-                        <li class="payment-delivery__column-item">
-                            Банковскими картами Visa, Mastercard, платёжной системой «Мир»
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="payment-delivery__column">
-                    <h4 class="payment-delivery__column-title">
-                        Доставка
-                    </h4>
-
-                    <ul class="payment-delivery__column-list">
-                        <li class="payment-delivery__column-item">
-                            Минимальая сумма заказа 2000 ₽
-                        </li>
-                        <li class="payment-delivery__column-item">
-                            За МКАД минимальая сумма заказа 9000₽
-                        </li>
-                        <li class="payment-delivery__column-item">
-                            Доставим в течение 120* минут с момента размещения заказа
-                        </li>
-                        <li class="payment-delivery__column-item">
-                            Возможна доставка по России (по предварительному согласованию с менеджером)
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <a class="payment-delivery__btn btn" href="">Подробнее</a>
-        </div>
-
-    </div>
-
-
-</section>
-            <!-- /.payment-delivery -->
 
             <section class="new-products">
     <div class="new-products__inner">
@@ -369,7 +329,7 @@
         </div>
     </a>
 
-    <a class="products__item" href="product_page.html">
+    <a class="products__item" href="product_page-none.html">
         <img class="products__item-img" src="/images/new product/2.png" alt="Изображение продукта">
         <div class="products__item-info">
             <div class="products__item-top">
@@ -650,114 +610,65 @@
 </section>
             <!-- /.new-products -->
 
-            <section class="reviews">
-    <div class="container">
-        <div class="reviews__inner">
-            <h2 class="reviews__title section-title section-title-center">Отзывы</h2>
+            <section class="payment-delivery">
 
-            <div class="reviews__slider slider-theme">
+    <h2 class="payment-delivery__title section-title section-title-center">Оплата и доставка</h2>
 
-                <div class="reviews__slider-container slider-theme__container">
-                    <div class="reviews__slider-item slider-theme__item">
-                        <div class="reviews__slider-item_rating">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                        </div>
-                        <p class="reviews__slider-item_text">
-                            Блинчики "Императорские" пришлись по вкусу всем, кто их попробовал! Одним предложением -
-                            "Пальчики оближешь". Подтверждение заказа, доставка на высшем уровне. Сервисом доволен на
-                            100%. Все очень вкусно! Так держать!
-                        </p>
-                        <div class="reviews__slider-item_info">
-                            <div class="reviews__slider-item_box">
-                                <h4 class="reviews__slider-item_name">Александр</h4>
-                                <h4 class="reviews__slider-item_date">19.07.2022</h4>
-                            </div>
-                            <a class="reviews__slider-item_more" href="">Читать полностью</a>
-                        </div>
-                    </div>
+    <div class="payment-delivery__inner">
+        <img class="payment-delivery__img" src="/images/payment-delivery.png" alt="Оплата и доставка">
 
-                    <div class="reviews__slider-item slider-theme__item">
-                        <div class="reviews__slider-item_rating">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star-2.svg" alt="Star">
-                        </div>
-                        <p class="reviews__slider-item_text">
-                            Мы очень признательны Вашей компании. Заказывали стол для юбилея. Гости остались очень
-                            довольны, всё свежее, аккуратно упаковано и доставлено вовремя. Спасибо огромное за вашу
-                            работу!
-                        </p>
-                        <div class="reviews__slider-item_info">
-                            <div class="reviews__slider-item_box">
-                                <h4 class="reviews__slider-item_name">Владимир</h4>
-                                <h4 class="reviews__slider-item_date">30.05.2022</h4>
-                            </div>
-                            <a class="reviews__slider-item_more" href="">Читать полностью</a>
-                        </div>
-                    </div>
+        <div class="payment-delivery__info">
+            <div class="payment-delivery__columns">
+                <div class="payment-delivery__column">
+                    <h4 class="payment-delivery__column-title">
+                        Оплата
+                    </h4>
 
-                    <div class="reviews__slider-item slider-theme__item">
-                        <div class="reviews__slider-item_rating">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                        </div>
-                        <p class="reviews__slider-item_text">
-                            Спасибо большое за то, что освободили меня от головной боли: чем угостить коллег на день
-                            рождения))) Все было так вкусно! И красиво, красочно! Упаковка отменная, все в целости) и
-                            самый большой страх - курьер опаздывает, но нет!
-                        </p>
-                        <div class="reviews__slider-item_info">
-                            <div class="reviews__slider-item_box">
-                                <h4 class="reviews__slider-item_name">Ольга</h4>
-                                <h4 class="reviews__slider-item_date">06.06.2022</h4>
-                            </div>
-                            <a class="reviews__slider-item_more" href="">Читать полностью</a>
-                        </div>
-                    </div>
-
-                    <div class="reviews__slider-item slider-theme__item">
-                        <div class="reviews__slider-item_rating">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                            <img src="/images/star.svg" alt="Star">
-                        </div>
-                        <p class="reviews__slider-item_text">
-                            Блинчики "Императорские" пришлись по вкусу всем, кто их попробовал! Одним предложением -
-                            "Пальчики оближешь". Подтверждение заказа, доставка на высшем уровне. Сервисом доволен на
-                            100%. Все очень вкусно! Так держать!
-                        </p>
-                        <div class="reviews__slider-item_info">
-                            <div class="reviews__slider-item_box">
-                                <h4 class="reviews__slider-item_name">Александр</h4>
-                                <h4 class="reviews__slider-item_date">19.07.2022</h4>
-                            </div>
-                            <a class="reviews__slider-item_more" href="">Читать полностью</a>
-                        </div>
-                    </div>
-                    
+                    <ul class="payment-delivery__column-list">
+                        <li class="payment-delivery__column-item">
+                            Наличными курьеру
+                        </li>
+                        <li class="payment-delivery__column-item">
+                            Безналичный расчет
+                        </li>
+                        <li class="payment-delivery__column-item">
+                            Оплата через терминалы и салоны связи
+                        </li>
+                        <li class="payment-delivery__column-item">
+                            Банковскими картами Visa, Mastercard, платёжной системой «Мир»
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="slider-theme__navigation">
-                    <div class="slider-theme__navigation-prev reviews-slider__btn-prev slider-theme__navigation-btn"></div>
-                    <div class="slider-theme__navigation-next reviews-slider__btn-next slider-theme__navigation-btn"></div>
-                </div>
+                <div class="payment-delivery__column">
+                    <h4 class="payment-delivery__column-title">
+                        Доставка
+                    </h4>
 
+                    <ul class="payment-delivery__column-list">
+                        <li class="payment-delivery__column-item">
+                            Минимальая сумма заказа 2000 ₽
+                        </li>
+                        <li class="payment-delivery__column-item">
+                            За МКАД минимальая сумма заказа 9000₽
+                        </li>
+                        <li class="payment-delivery__column-item">
+                            Доставим в течение 120* минут с момента размещения заказа
+                        </li>
+                        <li class="payment-delivery__column-item">
+                            Возможна доставка по России (по предварительному согласованию с менеджером)
+                        </li>
+                    </ul>
+                </div>
             </div>
+            <a class="payment-delivery__btn btn" href="">Подробнее</a>
         </div>
+
     </div>
+
+
 </section>
-            <!-- /.reviews -->
+            <!-- /.payment-delivery -->
 
 
         </main>
