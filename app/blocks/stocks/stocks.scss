@@ -1,0 +1,94 @@
+.stocks {
+    &__item {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        &-left {
+            width: 40%;
+            background-color: #454850;
+            border-radius: 50px;
+            display: flex;
+            margin-right: 40px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-discount {
+            margin-bottom: 22px;
+
+            &_percent {
+                font-family: 'OrchideaProBold';
+                font-size: 64px;
+                color: #DBC09E;
+                text-align: center;
+            }
+
+            &_text {
+                font-family: 'OrchideaProBold';
+                font-size: 32px;
+                color: #DBC09E;
+                text-align: center;
+            }
+        }
+
+        &-info {
+            margin: auto;
+            max-width: 230px;
+        }
+
+        &-text {
+            line-height: 32px;
+            font-size: 32px;
+            color: #FAF6F0;
+            text-align: center;
+        }
+
+
+
+
+        &-right {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            &_conditions{
+                margin-bottom: 30px;
+            }
+            &_condition {
+                display: flex;
+                &:not(:last-child){
+                    margin-bottom: 12px;
+                }
+            }
+
+            &_title {
+                width: 75px;
+                font-size: 18px;
+                color: #454850;
+                font-family: 'OrchideaProSemiBold';
+                margin-right: 25px;
+            }
+            &_text{
+                line-height: 18px;
+                font-size: 18px;
+            }
+        }
+
+        &-btn{
+            width: 60%;
+            background-color: transparent;
+            color: #454850;
+            border: 1px solid #C79B77;
+            &:hover{
+                background-color:#C79B77;
+                color: #FAF6F0;
+            }
+        }
+    }
+
+}

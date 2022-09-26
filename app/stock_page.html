@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="wrapper checkout-page">
+    <div class="wrapper">
 
         <header class="header">
     <div class="header__top">
@@ -136,7 +136,7 @@
                             </a>
                         </li>
                         <li class="header__bottom-item item-hover">
-                            <a class="header__bottom-link" href="stocks_page.html">
+                            <a class="header__bottom-link" href="stock_page.html">
                                 Акции
                             </a>
                         </li>
@@ -179,133 +179,17 @@
                             <a class="breadcrumbs__link" href="/">Главная</a>
                         </li>
                         <li class="breadcrumbs__item">
-                            <a class="breadcrumbs__link" href="cart_page.html">Корзина</a>
-                        </li>
-                        <li class="breadcrumbs__item">
-                            <a class="breadcrumbs__link breadcrumbs__link--active" href="checkout_page.html">Оформление
-                                заказа</a>
+                            <a class="breadcrumbs__link breadcrumbs__link--active" href="stocks_page.html">Все блюда</a>
                         </li>
                     </ul>
                 </nav>
 
-
-                <section class="checkout">
-                    <div class="checkout__inner">
-                        <div class="checkout__column">
-                            <h1 class="checkout__title section-title">Оформление заказа</h1>
-
-                            <form class="checkout__form" action="">
-
-                                <div class="checkout__form-item checkout__form-radio">
-                                    <h3 class="checkout__form-item_title">Принадлежность</h3>
-                                    <div class="checkout__form-radio_btns">
-                                        <div class="checkout__form-radio_item">
-                                            <input class="checkout__form-radio_btn" type="radio" id="fiz_face"
-                                                name="face" value="Физическое лицо">
-                                            <label class="checkout__form-radio_name" for="fiz_face">Физ. Лицо</label>
-                                        </div>
-                                        <div class="checkout__form-radio_item">
-                                            <input class="checkout__form-radio_btn" type="radio" id="ur_face"
-                                                name="face" value="Юридическое лицо">
-                                            <label class="checkout__form-radio_name" for="ur_face">Юр. Лицо</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="checkout__form-item">
-                                    <label class="checkout__form-item_title" for="name">Имя</label>
-                                    <input class="checkout__form-item_input" type="text" id="name" name="name">
-                                </div>
-
-                                <div class="checkout__form-item">
-                                    <label class="checkout__form-item_title" for="tel">Номер телефона*</label>
-                                    <input class="checkout__form-item_input" type="text" id="tel" name="tel" required>
-                                </div>
-
-                                <div class="checkout__form-item">
-                                    <label class="checkout__form-item_title" for="mail">Электронная почта*</label>
-                                    <input class="checkout__form-item_input" type="text" id="mail" name="mail" required>
-                                </div>
-
-                                <div class="checkout__form-item">
-                                    <label class="checkout__form-item_title" for="address">Адрес доставки*</label>
-                                    <input class="checkout__form-item_input" type="text" id="address" name="address"
-                                        required>
-                                </div>
-
-                                <div class="checkout__form-item">
-                                    <label class="checkout__form-item_title" for="date">Дата доставки*</label>
-                                    <input class="checkout__form-item_input" type="text" id="date" name="date" required>
-                                </div>
-
-                                <div class="checkout__form-item">
-                                    <label class="checkout__form-item_title" for="comment">Комментарий к заказу</label>
-                                    <textarea class="checkout__form-item_input" id="comment" name="comment"></textarea>
-                                </div>
-
-                                <div class="checkout__form-item">
-                                    <label class="checkout__form-item_title" for="payment">Способ оплаты</label>
-                                    <select class="checkout__form-item_input" id="payment" name="payment">
-                                        <option value="Наличными">Наличными</option>
-                                        <option value="Безналичный платеж">Безналичный платеж</option>
-                                        <option value="Банковской картой онлайн">Банковской картой онлайн</option>
-                                        <option value="Банковской картой курьеру">Банковской картой курьеру</option>
-                                    </select>
-                                </div>
-
-
-                                <button class="checkout__form-btn btn" type="submit">Оформить заказ</button>
-
-
-                            </form>
-                        </div>
-                        <div class="checkout__column">
-                            <h1 class="checkout__title section-title">Ваш заказ</h1>
-
-                            <div class="cart-product">
-                                <div class="cart-product__inner">
-                                    <div class="cart-product__main">
-                                        <img class="cart-product__img" src="/images/cart-product.png"
-                                            alt="Фото вашего заказа">
-                                        <div class="cart-product__info">
-                                            <div class="cart-product__info-top">
-                                                <a class="cart-product__info-top_title" href="product_page.html">Блины
-                                                    «Императорские» 24 шт.</a>
-                                                <span class="cart-product__info-top_descr">
-                                                    Масса, гр: 1320
-                                                </span>
-                                            </div>
-                                            <div class="products__item-center">
-                                                <div class="products__item-price">
-                                                    <h3 class="products__item-oldPrice">6 620 ₽</h3>
-                                                    <h3 class="products__item-newPrice">5 270 ₽</h3>
-                                                </div>
-
-                                                <div class="products__item-counter">
-                                                    <button
-                                                        class="products__item-counter_minus products__item-counter_btn">-</button>
-                                                    <div class="products__item-counter_digit">1</div>
-                                                    <button
-                                                        class="products__item-counter_plus products__item-counter_btn">+</button>
-                                                </div>
-
-                                                <button class="cart-product__delete-product">
-                                                    <img class="cart-product__delete-product_img"
-                                                        src="/images/cross-cart.svg" alt="Удалить товар из корзины">
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
+                <h1 class="page-title section-title">
+                    Акции
+                </h1>
 
             </div>
+
 
         </main>
         <!-- /.main -->
