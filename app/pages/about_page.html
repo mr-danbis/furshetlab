@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../blocks/head/head.html')
+
+<body>
+    <div class="wrapper">
+
+        @@include('../blocks/header/header.html')
+        <!-- /.header -->
+
+        <main class="main">
+
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="/">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs__link--active" href="about_page.html">О компании</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <h1 class="page-title section-title">
+                    О компании
+                </h1>
+            </div>
+
+            <section class="about">
+                <div class="about__wrapper">
+                    <img class="about__img" src="/images/about-img.png" alt="О компании">
+                    <div class="about__info">
+                        <p class="about__info-text">
+                            Компания Furshet Lab уделяет особое внимание поддержанию высоких стандартов обслуживания
+                            и качества приготовленных блюд. Постоянно совершенствует собственные технологии и заботится
+                            о своих клиентах, предлагая различные новые и современные виды сервиса.
+                        </p>
+
+                        <p class="about__info-text">
+                            Наш бизнес — это готовые решения для деловых и торжественных мероприятий! Будь то дома
+                            или в офисе у нас есть решения в соответствии с вашими нуждами! Любой сотрудник нашей
+                            преданной команды предоставит сервис высшего качества. Мы рады предложить вам отличную еду,
+                            ответственный персонал, консультацию и помощь для вашего мероприятия.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+            @@include('../blocks/clients/clients.html')
+            <!-- /.clients -->
+
+            @@include('../blocks/advantages/advantages.html')
+            <!-- /.advantages -->
+
+        </main>
+        <!-- /.main -->
+
+        @@include('../blocks/mobMenu/mobMenu.html')
+        <!-- /.mobMenu -->
+
+        @@include('../blocks/footer/footer.html')
+        <!-- /.footer -->
+
+    </div>
+    <!-- /.wrapper -->
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
