@@ -1,0 +1,55 @@
+.account-registration {
+    width: 20%;
+    @include adaptiv-paddingBottom(150,75);
+
+    &__form {
+        &_input {
+            width: 100%;
+            margin-bottom: 30px;
+            border: 1px solid #C4C4C4;
+            border-radius: 50px;
+            color: #C4C4C4;
+            background-color: transparent;
+            padding: 25px 35px;
+            &::placeholder{
+                color: #C4C4C4;
+            }
+        }
+
+        &_btns {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &_btn {
+            width: 47%;
+
+            &:nth-child(1) {
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+
+            &:nth-child(2) {
+                position: relative;
+                background-color: transparent;
+                color: #C79B77;
+                border: 1px solid #C79B77;
+
+                &:hover {
+                    background-color: #C79B77;
+                    color: white;
+                }
+
+                &:after {
+                    position: absolute;
+                    content: '*При регистрации нового пользователя вам начисляется 500 бонусных рублей';
+                    font-size: 15px;
+                    color: rgba(69, 72, 80, 0.5);
+                    left: 20px;
+                    bottom: -70px;
+                }
+            }
+        }
+    }
+}
