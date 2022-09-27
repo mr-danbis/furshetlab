@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../blocks/head/head.html')
+
+<body>
+    <div class="wrapper favourites-page">
+
+        @@include('../blocks/header/header.html')
+        <!-- /.header -->
+
+        <main class="main">
+            <div class="container">
+                
+                <section class="error-404">
+                    <img class="error-404__img" src="/images/404.png" alt="Такой страницы не существует, перейдите на главную">
+                    <h1 class="error-404__title">Упс...что-то пошло не так!</h1>
+                    <p class="error-404__text">
+                        Такой страницы не существует, перейдите на главную
+                    </p>
+                    <a class="error-404__btn btn" href="/">На главную</a>
+                </section>
+
+            </div>
+        </main>
+        <!-- /.main -->
+
+        @@include('../blocks/mobMenu/mobMenu.html')
+        <!-- /.mobMenu -->
+
+        @@include('../blocks/footer/footer.html')
+        <!-- /.footer -->
+
+    </div>
+    <!-- /.wrapper -->
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
