@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../blocks/head/head.html')
+
+<body>
+    <div class="wrapper">
+
+        @@include('../blocks/header/header.html')
+        <!-- /.header -->
+
+        <main class="main">
+
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="/">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs__link--active"
+                                href="contacts_page.html">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <h1 class="page-title section-title">
+                    Контакты
+                </h1>
+            </div>
+
+
+            <section class="contacts">
+                <iframe class="contacts__map"
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac3aaddcc9936ec98b5e2c25582bb1dbcbd5f00bf7b5e7bd705a68ad30f71899d&amp;source=constructor"
+                    width="100%" frameborder="0"></iframe>
+
+                <div class="contacts__info">
+                    <div class="contacts__info-item">
+                        <h5 class="contacts__info-item_title">Организация</h5>
+                        <p class="contacts__info-item_text">
+                            ООО «КОСТИС» ОГРН: 1147746090920
+                        </p>
+                    </div>
+                    <div class="contacts__info-item">
+                        <h5 class="contacts__info-item_title">Адрес</h5>
+                        <p class="contacts__info-item_text">
+                            127550, Россия, г. Москва, ул. Прянишникова, д. 19А, стр. 1, этаж 2, пом. 1, ком. 8-15
+                        </p>
+                    </div>
+                    <div class="contacts__info-item">
+                        <h5 class="contacts__info-item_title">Телефон</h5>
+                        <a class="contacts__info-item_link contacts__info-item_tel" href="tel:+74995216610">+7 (499) 521-66-10</a>
+                    </div>
+                    <div class="contacts__info-item">
+                        <h5 class="contacts__info-item_title">E-mail</h5>
+                        <a class="contacts__info-item_link" href="mailto:info@kostis.ru">info@kostis.ru</a>
+                    </div>
+                    <div class="contacts__info-item">
+                        <h5 class="contacts__info-item_title">р/с</h5>
+                        <p class="contacts__info-item_text">
+                            40702810502980001842 в АО "АЛЬФА-БАНК
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <!-- /.main -->
+
+        @@include('../blocks/mobMenu/mobMenu.html')
+        <!-- /.mobMenu -->
+
+        @@include('../blocks/footer/footer.html')
+        <!-- /.footer -->
+
+    </div>
+    <!-- /.wrapper -->
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
