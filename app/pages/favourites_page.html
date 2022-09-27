@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../blocks/head/head.html')
+
+<body>
+    <div class="wrapper favourites-page">
+
+        @@include('../blocks/header/header.html')
+        <!-- /.header -->
+
+        <main class="main">
+
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="/">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs__link--active"
+                                href="favourites_page.html">Избранное</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <h1 class="page-title section-title">
+                    Избранное
+                </h1>
+
+
+                <div class="product__slider">
+                    <div class="product__slider-list">
+                        <div class="product__slider-item">
+                            @@include('../blocks/products/products.html')
+                            <!-- /.products -->
+                        </div>
+                        <div class="product__slider-item">
+                            @@include('../blocks/products/products.html')
+                            <!-- /.products -->
+                        </div>
+                        <div class="product__slider-item">
+                            @@include('../blocks/products/products.html')
+                            <!-- /.products -->
+                        </div>
+                    </div>
+
+                    <div class="slider-theme__navigation">
+                        <div class="slider-theme__navigation-prev product-slider__btn-prev slider-theme__navigation-btn">
+                        </div>
+                        <div class="slider-theme__navigation-next product-slider__btn-next slider-theme__navigation-btn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+        <!-- /.main -->
+
+        @@include('../blocks/mobMenu/mobMenu.html')
+        <!-- /.mobMenu -->
+
+        @@include('../blocks/footer/footer.html')
+        <!-- /.footer -->
+
+    </div>
+    <!-- /.wrapper -->
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>
