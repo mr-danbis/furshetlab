@@ -1,0 +1,36 @@
+.stock {
+    @include adaptiv-marginBottom(105,50);
+    &__wrapper {
+        display: flex;
+    }
+
+    &__img {
+        width: 45%;
+        object-fit: cover;
+        margin-right: 40px;
+        border-radius: 0px 50px 50px 0px;
+    }
+
+    &__info {
+        width: 50%;
+        &-title {
+            font-size: 45px;
+            font-family: 'OrchideaProSemiBold';
+            margin-bottom: 20px;
+        }
+
+        &-text {
+            font-size: 18px;
+            line-height: 140%;
+            width: 55%;
+            margin-bottom: 71px;
+        }
+
+        &-description{
+            width: 55%;
+            font-size: 18px;
+            line-height: 140%;
+            font-family: 'OrchideaProSemiBold';
+        }
+    }
+}

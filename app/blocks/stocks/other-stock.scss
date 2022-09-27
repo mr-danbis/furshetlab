@@ -1,0 +1,25 @@
+.other-stocks{
+    & > .container {
+        .stocks__list{
+            display: flex;
+            justify-content: space-between;
+            & > .stocks__item {
+                width: 30%;
+                flex-direction: column;
+                margin-bottom: 0;
+                & > .stocks__item-left{
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+
+                & > .stocks__item-right{
+                    width: 90%;
+                    margin: auto;
+                    & > .stocks__item-btn {
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+}
