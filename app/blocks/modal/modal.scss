@@ -12,6 +12,13 @@
     width: 35%;
     display: none;
 
+    &-callback{
+        width: 700px;
+        &>.modal__title{
+            margin-bottom: 15px;
+        }
+    }
+
     &__close-btn {
         margin-bottom: 18px;
         margin-left: auto;
@@ -27,6 +34,13 @@
         font-size: 45px;
         line-height: 130%;
         font-family: 'OrchideaProBold';
+        margin-bottom: 50px;
+    }
+
+    &__description{
+        font-size: 18px;
+        line-height: 18px;
+        text-align: center;
         margin-bottom: 50px;
     }
 

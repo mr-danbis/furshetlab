@@ -64,19 +64,19 @@ $(document).ready(function () {
     openMobileSidebar();
 
 
-    if(wrapper.classList.contains('product-page')){
+    if (wrapper.classList.contains('product-page')) {
         wrapper.querySelector('.new-products__title').innerHTML = 'Другие варианты';
     }
-    if(wrapper.classList.contains('cart-page')){
+    if (wrapper.classList.contains('cart-page')) {
         wrapper.querySelector('.new-products__title').innerHTML = 'Распродажа';
     }
 
 
 
-    function modalOpenClose() {
+    function modalOpenCloseRegistration() {
         const accountEnterBtn = qs('.account-enter__form_btn--registration');
         const modalRegistration = qs('.modal-registration');
-        const modalCloseBtn = qs('.modal__close-btn');
+        const modalCloseBtn = document.querySelectorAll('.modal__close-btn');
 
         accountEnterBtn.addEventListener('click', () => {
             modalRegistration.style.display = 'block';
@@ -84,16 +84,44 @@ $(document).ready(function () {
             qs('main').style.opacity = '0.5';
             qs('footer').style.opacity = '0.5';
         });
-        modalCloseBtn.addEventListener('click', () => {
-            modalRegistration.style.display = 'none';
-            qs('header').style.opacity = '1';
-            qs('main').style.opacity = '1';
-            qs('footer').style.opacity = '1';
+
+        modalCloseBtn.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modalRegistration.style.display = 'none';
+                qs('header').style.opacity = '1';
+                qs('main').style.opacity = '1';
+                qs('footer').style.opacity = '1';
+            });
+        });
+
+    }
+    if (wrapper.classList.contains('account-enter-page')) {
+        modalOpenCloseRegistration();
+    }
+
+
+
+    function modalOpenCloseCallback() {
+        const callbackBtn = qs('.number-order');
+        const modalCallback = qs('.modal-callback');
+        const modalCloseBtn = document.querySelectorAll('.modal__close-btn');
+
+        callbackBtn.addEventListener('click', () => {
+            modalCallback.style.display = 'block';
+            qs('header').style.opacity = '0.5';
+            qs('main').style.opacity = '0.5';
+            qs('footer').style.opacity = '0.5';
+        });
+        modalCloseBtn.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modalCallback.style.display = 'none';
+                qs('header').style.opacity = '1';
+                qs('main').style.opacity = '1';
+                qs('footer').style.opacity = '1';
+            });
         });
     }
-    if(wrapper.classList.contains('account-enter-page')){
-        modalOpenClose();
-    }
+    modalOpenCloseCallback();
 
 
 

@@ -338,7 +338,40 @@
         </main>
         <!-- /.main -->
 
-        <section class="mobMenu">
+        <section class="modal-callback modal">
+
+    <button class="modal__close-btn">
+        <img src="/images/icons/close-black.svg" alt="">
+    </button>
+
+    <h1 class="modal__title">
+        Обратный звонок
+    </h1>
+
+    <p class="modal__description">
+        Заполните поля и мы с вами свяжемся
+    </p>
+
+    <form class="modal__form" action="">
+
+        <input class="modal__form-input" type="text" placeholder="Введите имя">
+        <input class="modal__form-input" type="text" placeholder="Номер телефона">
+
+        <button class="modal__form-btn btn">Заказать звонок</button>
+
+        <div class="modal__form-bottom">
+            <input class="modal__form-bottom_checkbox" type="checkbox" id="modalCheckbox" name="modalCheckbox">
+            <label class="modal__form-bottom_text" for="modalCheckbox">
+                Нажимая кнопку "Зарегистрироваться", я даю своё согласие на обработку персональных данных. 
+                <a href="">Политика конфиденциальности</a> и 
+                <a href="">публичная оферта</a>
+            </label>
+        </div>
+    </form>
+</section>
+    <!-- /.modal -->
+
+    <section class="mobMenu">
     <div class="mobMenu__container">
 
         <div class="mobMenu__btn-box">
@@ -458,7 +491,7 @@
 
     </div>
 </section>
-        <!-- /.mobMenu -->
+    <!-- /.mobMenu -->
 
         <footer class="footer">
     <div class="container">
