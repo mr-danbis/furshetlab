@@ -2,6 +2,8 @@ $(document).ready(function () {
 
     $.noConflict();
     const header = qs('.header');
+    const wrapper = qs('.wrapper');
+
 
     function qs(selector) {
         return document.querySelector(`${selector}`);
@@ -19,26 +21,6 @@ $(document).ready(function () {
     // }
     // openingNewProductsTabs();
 
-
-    function modalOpenClose() {
-        const accountEnterBtn = qs('.account-enter__form_btn--registration');
-        const modalRegistration = qs('.modal-registration');
-        const modalCloseBtn = qs('.modal__close-btn');
-
-        accountEnterBtn.addEventListener('click', () => {
-            modalRegistration.style.display = 'block';
-            qs('header').style.opacity = '0.5';
-            qs('main').style.opacity = '0.5';
-            qs('footer').style.opacity = '0.5';
-        });
-        modalCloseBtn.addEventListener('click', () => {
-            modalRegistration.style.display = 'none';
-            qs('header').style.opacity = '1';
-            qs('main').style.opacity = '1';
-            qs('footer').style.opacity = '1';
-        });
-    }
-    modalOpenClose();
 
 
 
@@ -80,6 +62,40 @@ $(document).ready(function () {
 
     }
     openMobileSidebar();
+
+
+    if(wrapper.classList.contains('product-page')){
+        wrapper.querySelector('.new-products__title').innerHTML = 'Другие варианты';
+    }
+    if(wrapper.classList.contains('cart-page')){
+        wrapper.querySelector('.new-products__title').innerHTML = 'Распродажа';
+    }
+
+
+
+    function modalOpenClose() {
+        const accountEnterBtn = qs('.account-enter__form_btn--registration');
+        const modalRegistration = qs('.modal-registration');
+        const modalCloseBtn = qs('.modal__close-btn');
+
+        accountEnterBtn.addEventListener('click', () => {
+            modalRegistration.style.display = 'block';
+            qs('header').style.opacity = '0.5';
+            qs('main').style.opacity = '0.5';
+            qs('footer').style.opacity = '0.5';
+        });
+        modalCloseBtn.addEventListener('click', () => {
+            modalRegistration.style.display = 'none';
+            qs('header').style.opacity = '1';
+            qs('main').style.opacity = '1';
+            qs('footer').style.opacity = '1';
+        });
+    }
+    if(wrapper.classList.contains('account-enter-page')){
+        modalOpenClose();
+    }
+
+
 
 
     $('.product__slider-list').slick({
@@ -217,17 +233,5 @@ $(document).ready(function () {
         }
 
     };
-
-
-
-
-
-    const wrapper = qs('.wrapper');
-    if(wrapper.classList.contains('product-page')){
-        wrapper.querySelector('.new-products__title').innerHTML = 'Другие варианты';
-    }
-    if(wrapper.classList.contains('cart-page')){
-        wrapper.querySelector('.new-products__title').innerHTML = 'Распродажа';
-    }
 
 });
