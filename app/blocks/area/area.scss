@@ -1,0 +1,76 @@
+.area {
+    &__title {
+        margin-bottom: 64px;
+    }
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__points {
+        width: 35%;
+    }
+
+    &__point {
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 0px 110px 110px 0px;
+
+        &:not(:last-child) {
+            margin-bottom: 34px;
+        }
+
+        &:first-child {
+            background-color: #89DC84;
+        }
+
+        &:nth-child(2) {
+            background-color: #E9D383;
+        }
+
+        &:nth-child(3) {
+            background-color: #ABD8F8;
+        }
+
+        &:nth-child(4) {
+            background-color: #F59797;
+        }
+
+        &-price {
+            font-size: 24px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        &-text {
+            font-size: 24px;
+            line-height: 130%;
+
+            &>span {
+                font-family: 'OrchideaProSemiBold';
+            }
+        }
+
+        &-description {
+            margin-top: 8px;
+            font-size: 16px;
+            line-height: 130%;
+            color: rgba(69, 72, 80, 0.5);
+        }
+
+        &-number {
+            font-family: 'OrchideaProBold';
+            font-size: 128px;
+            color: #FAF6F0;
+        }
+    }
+
+    &__map{
+        object-fit: cover;
+        width: 60%;
+        border-radius: 50px 0px 0px 50px;
+    }
+}

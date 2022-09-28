@@ -12,6 +12,8 @@
 @import '../blocks/footer/footer';
 @import '../blocks/mobMenu/mobMenu';
 @import '../blocks/products/products';
+@import '../blocks/modal/modal';
+
 
 //main page blocks
 @import '../blocks/promo/promo';
@@ -61,5 +63,5 @@
 // account page blocks
 @import '../blocks/account/account-enter';
 
-// modal page blocks
-@import '../blocks/modal/modal';
+// payment & delivery page blocks
+@import '../blocks/area/area';
