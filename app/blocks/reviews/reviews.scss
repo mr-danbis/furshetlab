@@ -1,6 +1,6 @@
 .reviews{
     @include adaptiv-marginBottom(150,75);
-    background-image: url(/images/section-title-bg.svg);
+    background-image: url(/images/icons/section-title-bg.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: bottom;
@@ -14,7 +14,7 @@
                 position: absolute;
                 width: 48px;
                 height: 38px;
-                content: url(/images/marks.svg);
+                content: url(/images/icons/marks.svg);
                 top: -10px;
                 right: 40px;
             }

@@ -20,6 +20,25 @@ $(document).ready(function () {
     // openingNewProductsTabs();
 
 
+    function modalOpenClose() {
+        const accountEnterBtn = qs('.account-enter__form_btn--registration');
+        const modalRegistration = qs('.modal-registration');
+        const modalCloseBtn = qs('.modal__close-btn');
+
+        accountEnterBtn.addEventListener('click', () => {
+            modalRegistration.style.display = 'block';
+            qs('header').style.opacity = '0.5';
+            qs('main').style.opacity = '0.5';
+            qs('footer').style.opacity = '0.5';
+        });
+        modalCloseBtn.addEventListener('click', () => {
+            modalRegistration.style.display = 'none';
+            qs('header').style.opacity = '1';
+            qs('main').style.opacity = '1';
+            qs('footer').style.opacity = '1';
+        });
+    }
+    modalOpenClose();
 
 
 

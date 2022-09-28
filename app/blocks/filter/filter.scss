@@ -61,7 +61,6 @@
                 position: absolute;
                 z-index: -1;
                 opacity: 0;
-                
             }
 
             &_checkbox+label::before {
@@ -80,7 +79,7 @@
 
             &_checkbox:checked+label::before {
                 background-color: #C79B77;
-                background-image: url(/images/checked.svg);
+                background-image: url(/images/icons/checked.svg);
                 background-repeat: no-repeat;
                 background-size: 60%;
                 background-position: center;

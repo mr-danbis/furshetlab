@@ -34,7 +34,7 @@ body {
 
     &::before {
         position: absolute;
-        content: url(/images/share.svg);
+        content: url(/images/icons/share.svg);
         left: 0;
     }
 
@@ -67,7 +67,7 @@ body {
     &::before {
         left: 0;
         position: absolute;
-        content: url(/images/cross-delete.svg);
+        content: url(/images/icons/cross-delete.svg);
 
     }
 }
@@ -77,7 +77,7 @@ body {
 }
 
 .bgInner {
-    background-image: url(/images/section-title-bg-2.svg);
+    background-image: url(/images/icons/section-title-bg-2.svg);
     background-repeat: no-repeat;
     background-size: contain;
     padding-top: 70px;

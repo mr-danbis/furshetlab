@@ -1,0 +1,117 @@
+.modal {
+    position: fixed;
+    background-color: #FAF6F0;
+    box-shadow: 0px 4px 35px rgba(181, 196, 202, 0.25);
+    border-radius: 50px;
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    padding-top: 100px;
+    width: 35%;
+    display: none;
+
+    &__close-btn {
+        margin-bottom: 18px;
+        margin-left: auto;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+
+    &__title {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        font-size: 45px;
+        line-height: 130%;
+        font-family: 'OrchideaProBold';
+        margin-bottom: 50px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-radio {
+            width: 40%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        &-input {
+            padding: 25px 35px;
+            width: 100%;
+            margin-bottom: 30px;
+            border: 1px solid #C4C4C4;
+            border-radius: 50px;
+            background-color: transparent;
+
+            &::placeholder {
+                font-size: 18px;
+                color: #C4C4C4;
+            }
+        }
+
+        &-btn {
+            width: 60%;
+            margin-bottom: 20px;
+            &:hover {
+                background-color: transparent;
+            }
+        }
+
+        &-bottom {
+            display: flex;
+
+            &_checkbox {
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+            }
+
+             &_checkbox+label::before {
+                position: absolute;
+                content: '';
+                margin: 0;
+                width: 20px;
+                height: 20px;
+                background-color: transparent;
+                border: 1px solid #454850;
+                border-radius: 3px;
+                display: inline-block;
+                flex-shrink: 0;
+                flex-grow: 0;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &_checkbox:checked+label::before {
+                background-color: #C79B77;
+                background-image: url(/images/icons/checked.svg);
+                background-repeat: no-repeat;
+                background-size: 60%;
+                background-position: center;
+            }
+
+            &_text {
+                position: relative;
+                padding-left: 35px;
+                font-size: 18px;
+                line-height: 130%;
+                color: #C4C4C4;
+                &>a{
+                    color: #0072FF;
+                    transition: all .3s;
+                    &:hover{
+                        color:#C79B77;
+                    }
+                }
+            }
+        }
+    }
+}

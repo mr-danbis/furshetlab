@@ -32,18 +32,18 @@
 
         &-prev {
             margin-right: 15px;
-            content: url(/images/arrow-prev-black.svg);
+            content: url(/images/icons/arrow-prev-black.svg);
 
             &:hover {
-                content: url(/images/arrow-prev-white.svg);
+                content: url(/images/icons/arrow-prev-white.svg);
             }
         }
 
         &-next {
-            content: url(/images/arrow-next-black.svg);
+            content: url(/images/icons/arrow-next-black.svg);
 
             &:hover {
-                content: url(/images/arrow-next-white.svg);
+                content: url(/images/icons/arrow-next-white.svg);
             }
         }
     }
