@@ -1,0 +1,34 @@
+.delivery-time {
+    @include adaptiv-marginBottom(150,75);
+    display: flex;
+
+    &>img {
+        margin-right: 40px;
+    }
+
+    &__info{
+        width: 20%;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 24px;
+        font-family: 'OrchideaProSemiBold';
+        margin-bottom: 40px;
+    }
+
+    &__item{
+        padding-left: 41px;
+        position: relative;
+        font-size: 18px;
+        line-height: 130%;
+        &:not(:last-child){
+            margin-bottom: 31px;
+        }
+        &::before{
+            position: absolute;
+            content: url(/images/icons/done.svg);
+            left: 0;
+        }
+    }
+}

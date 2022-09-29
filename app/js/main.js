@@ -1,8 +1,10 @@
 $(document).ready(function () {
-
     $.noConflict();
+
     const header = qs('.header');
     const wrapper = qs('.wrapper');
+    const container = qs('.container');
+
 
 
     function qs(selector) {
@@ -10,24 +12,27 @@ $(document).ready(function () {
     }
 
 
-    // function openingNewProductsTabs() {
-    //     const tabNav = document.querySelector('.new-products__tabs-nav');
-    //     tabNav.addEventListener('click', (e) => {
-    //         if (e.target && !e.target.classList.contains('tabs-active') && !e.target.classList.contains('new-products__tabs-nav')) {
-    //             tabNav.querySelector('.tabs-active').classList.remove('tabs-active');
-    //             e.target.classList.add('tabs-active');
-    //         }
-    //     });
-    // }
-    // openingNewProductsTabs();
-
-
-
-
     function resizeMainPadding() {
         qs('.main').style.paddingTop = `${header.clientHeight-3}px`;
     }
     resizeMainPadding();
+
+
+
+    function resizePaddingLeft() {
+        const areaPoint = document.querySelectorAll('.area__point');
+        const returnContent = document.querySelector('.return__content');
+
+        areaPoint.forEach(point => {
+            point.style.paddingLeft = window.getComputedStyle(container).marginLeft;
+        });
+
+        returnContent.style.marginLeft = window.getComputedStyle(container).marginLeft;
+
+    }
+    if (wrapper.classList.contains('payment-delivery-page')) {
+        resizePaddingLeft();
+    }
 
 
 
@@ -215,6 +220,13 @@ $(document).ready(function () {
 
 
     window.onresize = function () {
+
+
+        if (wrapper.classList.contains('payment-delivery-page')) {
+            resizePaddingLeft();
+        }
+
+
         if (window.screen.width < 750) {
 
             $('.delivery__сategories').slick({

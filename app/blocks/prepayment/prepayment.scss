@@ -1,0 +1,45 @@
+.prepayment {
+    @include adaptiv-marginBottom(150,75);
+    &__wrapper {
+        width: 80%;
+        margin: auto;
+    }
+
+    &__title {
+        margin-bottom: 33px;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-around;
+
+        &-column {
+            width: 35%;
+        }
+
+        &-title {
+            font-size: 20px;
+            line-height: 130%;
+            font-family: 'OrchideaProSemiBold';
+            margin-bottom: 15px;
+        }
+
+        &-item {
+            font-size: 18px;
+            line-height: 130%;
+            padding-left: 30px;
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            &::before{
+                position: absolute;
+                content: '•';
+                left: 0;
+                margin-left: 10px;
+            }
+        }
+    }
+}

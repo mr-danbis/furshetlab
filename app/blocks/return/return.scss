@@ -1,0 +1,64 @@
+.return {
+    &__content {
+        &-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include adaptiv-marginBottom(110, 55);
+        }
+
+        &-bottom {
+            width: 60%;
+            margin: auto;
+        }
+    }
+
+    &__info {
+        width: 35%;
+
+        &-text {
+            font-size: 18px;
+            line-height: 130%;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__img {
+        width: 50%;
+    }
+
+    &__points {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__point {
+        width: 45%;
+
+        &:nth-child(1),
+        &:nth-child(2){
+            @include adaptiv-marginBottom(120,60);
+        }
+
+        &-number {
+            font-size: 128px;
+            font-family: 'OrchideaProSemiBold';
+        }
+
+        &-text {
+            font-size: 18px;
+            line-height: 130%;
+            &>a{
+                color: #454850;
+                transition: all .3s;
+                &:hover{
+                    color: #C79B77;
+                }
+            }
+        }
+    }
+}
