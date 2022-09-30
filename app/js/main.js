@@ -137,8 +137,10 @@ $(document).ready(function () {
         const contentDBClasses = ['.account__data', '.account__bonuses', '.account__history'];
 
         accountNav.addEventListener('click', (e) => {
-            if (e.target && !e.target.classList.contains(activeTabClass)) {
+            if (e.target && !e.target.classList.contains(activeTabClass) && e.target.classList.contains('account__nav-item')) {
                 e.target.classList.add(activeTabClass);
+            } else {
+                return;
             }
 
             accountNavItems.forEach(item => {
