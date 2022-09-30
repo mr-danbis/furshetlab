@@ -129,6 +129,49 @@ $(document).ready(function () {
     modalOpenCloseCallback();
 
 
+    function accountTabs() {
+        const accountNav = qs('.account__nav');
+        const accountNavItems = document.querySelectorAll('.account__nav-item');
+        const activeTabClass = 'account__nav-item--active';
+        const activeContentClass = 'content-active';
+        const contentDBClasses = ['.account__data', '.account__bonuses', '.account__history'];
+
+        accountNav.addEventListener('click', (e) => {
+            if (e.target && !e.target.classList.contains(activeTabClass)) {
+                e.target.classList.add(activeTabClass);
+            }
+
+            accountNavItems.forEach(item => {
+                if (item.classList.contains(activeTabClass) && item != e.target) {
+                    item.classList.remove(activeTabClass);
+                }
+            });
+
+
+            for (let i = 0; i < contentDBClasses.length; i++) {
+                if (e.target.id && e.target.id.slice(-1) == i + 1) {
+                    qs(contentDBClasses[i]).classList.add(activeContentClass);
+                } else {
+                    qs(contentDBClasses[i]).classList.remove(activeContentClass);
+                }
+            }
+
+
+        });
+    }
+
+    if (wrapper.classList.contains ('account-page')){
+        accountTabs();
+    }
+
+
+
+    $('.account__history-list').slick({
+        slidesToShow: 3,
+        infinite: false,
+        prevArrow: $('.account__history-slider__btn-prev'),
+        nextArrow: $('.account__history-slider__btn-next'),
+    });
 
 
     $('.product__slider-list').slick({

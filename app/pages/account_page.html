@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../blocks/head/head.html')
+
+<body>
+    <div class="wrapper account-page">
+
+        @@include('../blocks/header/header.html')
+        <!-- /.header -->
+
+        <main class="main">
+
+            <div class="container">
+                <nav class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="/">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs__link--active" href="account_page.html">Личный
+                                кабинет</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <h1 class="page-title section-title">
+                    Личный кабинет
+                </h1>
+
+
+                <section class="account">
+                    <h2 class="account__login">Светлана</h2>
+                    <div class="account__tabs">
+                        <nav class="account__nav">
+                            <li class="account__nav-item account__nav-item--active" id="contentTab1">Личные данные</li>
+                            <li class="account__nav-item" id="contentTab2">Бонусы</li>
+                            <li class="account__nav-item" id="contentTab3">История заказов</li>
+                            <btn class="account__nav-item">Выход</btn>
+                        </nav>
+                        <div class="account__content">
+
+                            <div class="account__data account__content-item content-active">
+                                <div class="account__data-item">
+                                    <h4 class="account__data-title">Принадлежность</h4>
+                                    <p class="account__data-text">
+                                        Физ. Лицо
+                                    </p>
+                                </div>
+                                <div class="account__data-item">
+                                    <h4 class="account__data-title">Пол</h4>
+                                    <div class="account__data-radio">
+                                        <div class="account__data-radio_item">
+                                            <input class="account__data-radio_btn" type="radio" id="man" name="gender"
+                                                value="Мужчина">
+                                            <label class="account__data-radio_name" for="man">Мужчина</label>
+                                        </div>
+                                        <div class="account__data-radio_item account__data-radio_item--checked">
+                                            <input class="account__data-radio_btn" type="radio" id="woman" name="gender"
+                                                value="Женщина" checked>
+                                            <label class="account__data-radio_name" for="woman">Женщина</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="account__data-item">
+                                    <h4 class="account__data-title">Номер телефона</h4>
+                                    <input class="account__data-input" type="text" value="+7 (499) 511-06-00">
+                                </div>
+
+                                <div class="account__data-item">
+                                    <h4 class="account__data-title">Имя</h4>
+                                    <input class="account__data-input" type="text" value="Светлана">
+                                </div>
+
+                                <div class="account__data-item">
+                                    <h4 class="account__data-title">Электронная почта</h4>
+                                    <input class="account__data-input" type="email" value="Svetlana@mail.com">
+                                </div>
+
+                                <div class="account__data-item">
+                                    <h4 class="account__data-title">День рождения</h4>
+                                    <input class="account__data-input" type="date" value="1986-08-08">
+                                </div>
+
+                                <div class="account__data-item">
+                                    <h4 class="account__data-title">Адреса</h4>
+                                    <input class="account__data-input" type="text" placeholder="Улица">
+                                </div>
+
+                                <button class="account__data-btn btn">Применить</button>
+                            </div>
+
+
+
+                            <div class="account__bonuses account__content-item">
+                                <h3 class="account__bonuses-title">
+                                    На вашем счету <span>500</span> бонусных рублей
+                                </h3>
+
+                                <div class="account__bonuses-status">
+                                    <h3 class="account__bonuses-status_title">Статус</h3>
+                                    <ul class="account__bonuses-status_list">
+                                        <li class="account__bonuses-status_item account__bonuses-status_item--active">
+                                            <div>
+                                                <span class="account__bonuses-status_item-type">Бронзовый</span>
+                                                <span class="account__bonuses-status_item-cashback">Кэшбэк
+                                                    <span>3</span>%
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="account__bonuses-status_item">
+                                            <div>
+                                                <span class="account__bonuses-status_item-type">Серебро</span>
+                                                <span class="account__bonuses-status_item-cashback">Кэшбэк
+                                                    <span>5</span>%
+                                                </span>
+                                            </div>
+                                            <p class="account__bonuses-status_item-descr">
+                                                Что бы получить статус нужно заказать еще на сумму 30 000₽
+                                            </p>
+                                        </li>
+                                        <li class="account__bonuses-status_item">
+                                            <div>
+                                                <span class="account__bonuses-status_item-type">Золото</span>
+                                                <span class="account__bonuses-status_item-cashback">Кэшбэк
+                                                    <span>7</span>%
+                                                </span>
+                                            </div>
+                                            <p class="account__bonuses-status_item-descr">
+                                                Что бы получить статус нужно заказать еще на сумму 50 000₽
+                                            </p>
+                                        </li>
+                                        <li class="account__bonuses-status_item">
+                                            <div>
+                                                <span class="account__bonuses-status_item-type">Платина</span>
+                                                <span class="account__bonuses-status_item-cashback">Кэшбэк
+                                                    <span>10</span>%
+                                                </span>
+                                            </div>
+                                            <p class="account__bonuses-status_item-descr">
+                                                Что бы получить статус нужно заказать еще на сумму 70 000₽
+                                            </p>
+                                        </li>
+                                        <li class="account__bonuses-status_item">
+                                            <div>
+                                                <span class="account__bonuses-status_item-type">Бриллиант</span>
+                                                <span class="account__bonuses-status_item-cashback">Кэшбэк
+                                                    <span>12</span>%
+                                                </span>
+                                            </div>
+                                            <p class="account__bonuses-status_item-descr">
+                                                Что бы получить статус нужно заказать еще на сумму 100 000₽
+                                            </p>
+                                        </li>
+                                        <li class="account__bonuses-status_item">
+                                            <div>
+                                                <span class="account__bonuses-status_item-type">Калифорний</span>
+                                                <span class="account__bonuses-status_item-cashback">Кэшбэк
+                                                    <span>15</span>%
+                                                </span>
+                                            </div>
+                                            <p class="account__bonuses-status_item-descr">
+                                                Что бы получить статус нужно заказать еще на сумму 140 000₽
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            <div class="account__history account__content-item">
+                                <div class="account__history-slider">
+                                    <div class="account__history-list">
+                                        <div class="account__history-item">
+                                            <h3 class="account__history-item_title">
+                                                Заказ номер <span>2654862</span>
+                                            </h3>
+                                            <ul class="account__history-item_list">
+                                                <li class="account__history-item_point">
+                                                    <h4 class="account__history-item_point-title">Статус</h4>
+                                                    <p class="account__history-item_point-text">Завершен</p>
+                                                </li>
+                                                <li class="account__history-item_point">
+                                                    <h4 class="account__history-item_point-title">Дата оформления</h4>
+                                                    <p class="account__history-item_point-text">16.05.2022</p>
+                                                </li>
+                                                <li class="account__history-item_point">
+                                                    <h4 class="account__history-item_point-title">Доставка</h4>
+                                                    <p class="account__history-item_point-text">
+                                                        <span>17.05.2022</span>
+                                                        <span>19:00 - 19:30 </span>
+                                                    </p>
+                                                </li>
+                                                <li class="account__history-item_point">
+                                                    <h4 class="account__history-item_point-title">Оплата</h4>
+                                                    <p class="account__history-item_point-text">Банковской картой
+                                                        курьеру</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="account__history-item">
+                                            <h3 class="account__history-item_title">
+                                                Заказ номер <span>2654862</span>
+                                            </h3>
+                                            <ul class="account__history-item_list">
+                                                <li class="account__history-item_point">
+                                                    <h4 class="account__history-item_point-title">Статус</h4>
+                                                    <p class="account__history-item_point-text">Завершен</p>
+                                                </li>
+                                                <li class="account__history-item_point">
+                                                    <h4 class="account__history-item_point-title">Дата оформления</h4>
+                                                    <p class="account__history-item_point-text">16.05.2022</p>
+                                                </li>
+                                                <li class="account__history-item_point">
+                                                    <h4 class="account__history-item_point-title">Доставка</h4>
+                                                    <p class="account__history-item_point-text">
+                                                        <span>17.05.2022</span>
+                                                        <span>19:00 - 19:30 </span>
+                                                    </p>
+                                                </li>
+                                                <li class="account__history-item_point">
+                                                    <h4 class="account__history-item_point-title">Оплата</h4>
+                                                    <p class="account__history-item_point-text">Банковской картой
+                                                        курьеру</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="account__history-item">
+                                            <h3 class="account__history-item_title">
+                                                Заказ номер <span>2654862</span>
+                                            </h3>
+                                            <ul class="account__history-item_list">
+                                                <li class="account__history-item_point">
+                                                    <h4 class="account__history-item_point-title">Статус</h4>
+                                                    <p class="account__history-item_point-text">Завершен</p>
+                                                </li>
+                                                <li class="account__history-item_point">
+                                                    <h4 class="account__history-item_point-title">Дата оформления</h4>
+                                                    <p class="account__history-item_point-text">16.05.2022</p>
+                                                </li>
+                                                <li class="account__history-item_point">
+                                                    <h4 class="account__history-item_point-title">Доставка</h4>
+                                                    <p class="account__history-item_point-text">
+                                                        <span>17.05.2022</span>
+                                                        <span>19:00 - 19:30 </span>
+                                                    </p>
+                                                </li>
+                                                <li class="account__history-item_point">
+                                                    <h4 class="account__history-item_point-title">Оплата</h4>
+                                                    <p class="account__history-item_point-text">Банковской картой
+                                                        курьеру</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="account__history-item">
+                                            <h3 class="account__history-item_title">
+                                                Заказ номер <span>2654862</span>
+                                            </h3>
+                                            <ul class="account__history-item_list">
+                                                <li class="account__history-item_point">
+                                                    <h4 class="account__history-item_point-title">Статус</h4>
+                                                    <p class="account__history-item_point-text">Завершен</p>
+                                                </li>
+                                                <li class="account__history-item_point">
+                                                    <h4 class="account__history-item_point-title">Дата оформления</h4>
+                                                    <p class="account__history-item_point-text">16.05.2022</p>
+                                                </li>
+                                                <li class="account__history-item_point">
+                                                    <h4 class="account__history-item_point-title">Доставка</h4>
+                                                    <p class="account__history-item_point-text">
+                                                        <span>17.05.2022</span>
+                                                        <span>19:00 - 19:30 </span>
+                                                    </p>
+                                                </li>
+                                                <li class="account__history-item_point">
+                                                    <h4 class="account__history-item_point-title">Оплата</h4>
+                                                    <p class="account__history-item_point-text">Банковской картой
+                                                        курьеру</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="slider-theme__navigation">
+                                        <div
+                                            class="slider-theme__navigation-prev account__history-slider__btn-prev slider-theme__navigation-btn">
+                                        </div>
+                                        <div
+                                            class="slider-theme__navigation-next account__history-slider__btn-next slider-theme__navigation-btn">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </main>
+        <!-- /.main -->
+
+
+        @@include('../blocks/modal/modal-callback.html')
+        <!-- /.modal -->
+
+        @@include('../blocks/mobMenu/mobMenu.html')
+        <!-- /.mobMenu -->
+
+        @@include('../blocks/footer/footer.html')
+        <!-- /.footer -->
+
+    </div>
+    <!-- /.wrapper -->
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -63,7 +63,7 @@
 
                                 <div class="checkout__form-item">
                                     <label class="checkout__form-item_title" for="mail">Электронная почта*</label>
-                                    <input class="checkout__form-item_input" type="text" id="mail" name="mail" required>
+                                    <input class="checkout__form-item_input" type="email" id="mail" name="mail" required>
                                 </div>
 
                                 <div class="checkout__form-item">
@@ -74,7 +74,7 @@
 
                                 <div class="checkout__form-item">
                                     <label class="checkout__form-item_title" for="date">Дата доставки*</label>
-                                    <input class="checkout__form-item_input" type="text" id="date" name="date" required>
+                                    <input class="checkout__form-item_input" type="date" id="date" name="date" required>
                                 </div>
 
                                 <div class="checkout__form-item">
@@ -130,7 +130,8 @@
 
                                                 <button class="cart-product__delete-product">
                                                     <img class="cart-product__delete-product_img"
-                                                        src="/images/icons/cross-cart.svg" alt="Удалить товар из корзины">
+                                                        src="/images/icons/cross-cart.svg"
+                                                        alt="Удалить товар из корзины">
                                                 </button>
                                             </div>
                                         </div>
@@ -149,10 +150,10 @@
         <!-- /.main -->
 
         @@include('../blocks/modal/modal-callback.html')
-    <!-- /.modal -->
+        <!-- /.modal -->
 
-    @@include('../blocks/mobMenu/mobMenu.html')
-    <!-- /.mobMenu -->
+        @@include('../blocks/mobMenu/mobMenu.html')
+        <!-- /.mobMenu -->
 
         @@include('../blocks/footer/footer.html')
         <!-- /.footer -->

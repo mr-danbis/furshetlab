@@ -60,8 +60,11 @@
 // error-404 page blocks
 @import '../blocks/error-404/error-404';
 
-// account page blocks
+// account enter page blocks
 @import '../blocks/account/account-enter';
+
+// account page blocks
+@import '../blocks/account/account';
 
 // payment & delivery page blocks
 @import '../blocks/area/area';
@@ -70,3 +73,4 @@
 @import '../blocks/prepayment/prepayment';
 @import '../blocks/payment/payment';
 @import '../blocks/return/return';
+
