@@ -162,10 +162,27 @@ $(document).ready(function () {
         });
     }
 
-    if (wrapper.classList.contains ('account-page')){
+    if (wrapper.classList.contains('account-page')) {
         accountTabs();
     }
 
+
+
+    // rebuildingReviewsSlider() {
+    //     const 
+    // }
+    // if (wrapper.classList.contains('reviews-page')){
+    //     rebuildingReviewsSlider();
+    // }
+
+
+
+    $('.reviews-slider__inner').slick({
+        slidesToShow: 1,
+        infinite: false,
+        prevArrow: $('.reviews-slider-page__btn-prev '),
+        nextArrow: $('.reviews-slider-page__btn-next'),
+    });
 
 
     $('.account__history-list').slick({

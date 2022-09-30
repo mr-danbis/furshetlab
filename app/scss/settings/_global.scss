@@ -76,6 +76,13 @@ body {
     margin-bottom: 40px;
 }
 
+.page-text {
+    @include adaptiv-font(18,15);
+    line-height: 18px;
+    margin-bottom: 55px;
+    width: 25%;
+}
+
 .bgInner {
     background-image: url(/images/icons/section-title-bg-2.svg);
     background-repeat: no-repeat;
