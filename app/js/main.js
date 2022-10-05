@@ -168,12 +168,32 @@ $(document).ready(function () {
 
 
 
-    // rebuildingReviewsSlider() {
-    //     const 
-    // }
-    // if (wrapper.classList.contains('reviews-page')){
-    //     rebuildingReviewsSlider();
-    // }
+    function showingFullComment() {
+        const showMoreCommentBtn = document.querySelectorAll('.reviews__slider-item_more');
+
+        showMoreCommentBtn.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                let clickedItem = e.target.parentNode.parentNode;
+                let clickedText = clickedItem.querySelector('.reviews__slider-item_text');
+
+                if (btn.innerText == 'Закрыть') {
+                    btn.innerHTML = 'Читать полностью';
+                    clickedText.style.webkitLineClamp = '4';
+                    clickedItem.style.zIndex = '0';
+                } else{
+                    btn.innerHTML = 'Закрыть';
+                    clickedText.style.webkitLineClamp = 'unset';
+                    clickedItem.style.zIndex = '1';
+                }
+
+            });
+
+        });
+    }
+    if (wrapper.classList.contains('reviews-page')) {
+        showingFullComment();
+    }
+
 
 
 
