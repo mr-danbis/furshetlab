@@ -43,3 +43,24 @@
         }
     }
 }
+
+
+@media (max-width: 1200px) {
+    .prepayment{
+        &__wrapper{
+            width: 100%;
+        }
+    }
+}
+
+
+@media (max-width: 850px) {
+    .prepayment{
+        &__info{
+            justify-content: space-between;
+            &-column{
+                width: 45%;
+            }
+        }
+    }
+}

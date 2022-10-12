@@ -28,7 +28,7 @@ body {
     display: flex;
     align-items: center;
     padding-left: 36px;
-    font-size: 18px;
+    @include adaptiv-font(18,15);
     color: #454850;
     transition: all .3s;
 
@@ -44,7 +44,7 @@ body {
 }
 
 .backToShop-btn {
-    font-size: 18px;
+    @include adaptiv-font(18,15);
     color: #454850;
     transition: all .3s;
 
@@ -54,7 +54,7 @@ body {
 }
 
 .clearCart-btn {
-    font-size: 18px;
+    @include adaptiv-font(18,15);
     color: #E35151;
     position: relative;
     padding-left: 15px;
@@ -234,5 +234,11 @@ body {
 @media (max-width: 1200px) {
     .container {
         width: 92%;
+    }
+}
+
+@media (max-width: 750px) {
+    .page-text{
+        width: 50%;
     }
 }

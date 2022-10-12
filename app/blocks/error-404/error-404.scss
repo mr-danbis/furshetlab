@@ -5,24 +5,44 @@
     padding-top: 100px;
 
     &__img {
+        width: 80%;
         margin-bottom: 27px;
     }
 
     &__title {
-        font-size: 45px;
+        @include adaptiv-font(45,20);
         font-family: 'OrchideaProSemiBold';
         margin-bottom: 12px;
+        text-align: center;
     }
 
     &__text {
+        @include adaptiv-font(18,15);
         margin-bottom: 30px;
-        font-size: 18px;
+        text-align: center;
     }
 
     &__btn {
         width: 17%;
         &:hover {
             background-color: transparent;
+        }
+    }
+}
+
+
+@media (max-width: 850px) {
+    .error-404{
+        &__btn{
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .error-404{
+        &__btn{
+            width: 100%;
         }
     }
 }

@@ -7,12 +7,17 @@
             margin-bottom: 40px;
         }
 
+        &-img {
+            width: 40%;
+            object-fit: cover;
+            border-radius: 40px;
+        }
+
         &-left {
             width: 40%;
             background-color: #454850;
             border-radius: 50px;
             display: flex;
-            margin-right: 40px;
             padding: 15px;
             display: flex;
             justify-content: space-between;
@@ -23,14 +28,14 @@
 
             &_percent {
                 font-family: 'OrchideaProBold';
-                font-size: 64px;
+                @include adaptiv-font(64, 40);
                 color: #DBC09E;
                 text-align: center;
             }
 
             &_text {
                 font-family: 'OrchideaProBold';
-                font-size: 32px;
+                @include adaptiv-font(32, 20);
                 color: #DBC09E;
                 text-align: center;
             }
@@ -43,7 +48,7 @@
 
         &-text {
             line-height: 32px;
-            font-size: 32px;
+            @include adaptiv-font(32, 20);
             color: #FAF6F0;
             text-align: center;
         }
@@ -56,39 +61,121 @@
             display: flex;
             flex-direction: column;
             align-items: start;
-            &_conditions{
+            margin-left: 40px;
+
+            &_conditions {
                 margin-bottom: 30px;
             }
+
             &_condition {
                 display: flex;
-                &:not(:last-child){
+
+                &:not(:last-child) {
                     margin-bottom: 12px;
                 }
             }
 
             &_title {
-                width: 75px;
-                font-size: 18px;
+                @include adaptiv-font(18, 15);
                 color: #454850;
                 font-family: 'OrchideaProSemiBold';
-                margin-right: 25px;
+                width: 100px;
             }
-            &_text{
+
+            &_text {
+                width: 80%;
                 line-height: 18px;
-                font-size: 18px;
+                @include adaptiv-font(18, 15);
             }
         }
 
-        &-btn{
+        &-btn {
             width: 60%;
             background-color: transparent;
             color: #454850;
             border: 1px solid #C79B77;
-            &:hover{
-                background-color:#C79B77;
+
+            &:hover {
+                background-color: #C79B77;
                 color: #FAF6F0;
             }
         }
     }
 
+}
+
+
+@media (max-width: 1350px) {
+    .stocks {
+        &__item {
+            justify-content: space-between;
+
+            &-left {
+                width: 60%;
+            }
+
+            &-right {
+                margin-left: 0;
+                width: 35%;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1000px) {
+    .stocks {
+        &__item {
+            flex-direction: column;
+
+            &-left {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            &-right {
+                width: 90%;
+                flex-direction: row;
+                justify-content: space-between;
+
+                &_conditions {
+                    width: 55%;
+                }
+            }
+
+            &-btn {
+                width: 35%;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 600px) {
+    .stocks{
+        &__item{
+            &-right{
+                flex-direction: column;
+                &_conditions{
+                    width: 100%;
+                }
+            }
+            &-btn{
+                width: 50%;
+                margin: auto;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 450px) {
+    .stocks{
+        &__item{
+            &-btn{
+                width: 100%;
+            }
+        }
+    }
 }

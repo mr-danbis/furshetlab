@@ -1,5 +1,5 @@
 .account-enter {
-    width: 30%;
+    width: 450px;
     @include adaptiv-paddingBottom(150,75);
 
     &__form {
@@ -48,6 +48,28 @@
                     color: rgba(69, 72, 80, 0.5);
                     left: 20px;
                     bottom: -70px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .account-enter{
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .account-enter{
+        &__form{
+            &_btns{
+                flex-direction: column;
+            }
+            &_btn{
+                width: 100%;
+                &:first-child{
+                    margin-bottom: 15px;
                 }
             }
         }

@@ -28,6 +28,7 @@
 
         &__img {
             width: 20%;
+            object-fit: contain;
         }
 
         &__info {
@@ -42,7 +43,7 @@
                     color: #454850;
                     font-family: 'OrchideaProSemiBold';
                     margin-bottom: 15px;
-                    font-size: 24px;
+                    @include adaptiv-font(24, 20);
                     transition: all .3s;
 
                     &:hover {
@@ -51,7 +52,7 @@
                 }
 
                 &_descr {
-                    font-size: 18px;
+                    @include adaptiv-font(18, 15);
                     font-family: 'OrchideaProMedium';
                 }
             }
@@ -68,7 +69,7 @@
             &-bottom {
                 &_text {
                     width: 40%;
-                    font-size: 18px;
+                    @include adaptiv-font(18, 15);
                     line-height: 18px;
                     color: rgba(69, 72, 80, 0.5);
                     position: relative;
@@ -105,11 +106,13 @@
             background-color: transparent;
             padding: 22px 20px;
             transition: all .3s;
+
             &:hover {
                 border: 1px solid transparent;
                 background-color: #C79B77;
             }
-            &:hover svg{
+
+            &:hover svg {
                 fill: white;
                 fill-opacity: 1;
             }
@@ -123,16 +126,18 @@
         align-items: center;
 
         &-title {
-            font-size: 24px;
+            @include adaptiv-font(24, 18);
             margin-right: 30px;
         }
 
         &-digit {
-            font-size: 45px;
+            @include adaptiv-font(45, 20);
         }
     }
 
     &__bonus {
+        width: 21%;
+
         &-form {
             display: flex;
             align-items: center;
@@ -144,8 +149,7 @@
         }
 
         &-description {
-            width: 55%;
-            font-size: 15px;
+            @include adaptiv-font(18, 15);
             line-height: 15px;
 
             &>strong {
@@ -154,23 +158,26 @@
         }
     }
 
-    &__promo{
+    &__promo {
         &-form {
             display: flex;
             align-items: center;
         }
+
         &-input {
             margin-right: 10px;
         }
     }
 
-    &__btn{
+    &__btn {
         padding: 25px 55px;
         position: relative;
-        &:hover{
+
+        &:hover {
             background-color: transparent;
         }
-        &::after{
+
+        &::after {
             position: absolute;
             content: '* – не суммируется с акциями';
             font-size: 15px;
@@ -179,4 +186,204 @@
         }
     }
 
+}
+
+
+@media (max-width: 1700px) {
+    .cart {
+        &__price {
+            flex-direction: column;
+            align-items: start;
+        }
+
+        &__bonus {
+            width: 30%;
+        }
+
+        &__promo {
+            width: 30%;
+        }
+    }
+}
+
+
+@media (max-width: 1350px) {
+    .cart {
+        &__addition {
+            flex-wrap: wrap;
+        }
+
+        &__price {
+            width: auto;
+        }
+
+        &__promo {
+            width: auto;
+        }
+
+        &__bonus {
+            width: 35%;
+        }
+
+        &__btn {
+            margin-left: auto;
+            margin-top: 50px;
+        }
+
+
+        .cart-product {
+            &__info {
+                padding-right: 0 !important;
+                
+                &-top{
+                    margin-bottom: 20px;
+                }
+
+                &-bottom{
+                    &_text{
+                        width: 70%;
+                    }
+                }
+
+                .products__item-center{
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .cart{
+        &__options{
+            justify-content: space-between;
+        }
+        &__price{
+            margin-top: 50px;
+            order: 3;
+        }
+        &__btn{
+            order: 4;
+        }
+        &__bonus{
+            width: 50%;
+            &-description{
+                width: 80%;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 750px) {
+    .cart{
+        .cart-product{
+            &__main{
+                flex-direction: column;
+            }
+            &__img{
+                width: 50%;
+                margin-bottom: 15px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            &__info{
+                width: 100%;
+            }
+        }
+
+
+        &__addition{
+            flex-direction: column;
+        }
+
+        &__price{
+            width: 100%;
+            justify-content: center;
+            order: 1;
+            margin-top: 0;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        &__bonus{
+            order: 2;
+            width: 100%;
+            margin-bottom: 25px;
+            &-input{
+                width: 90%;
+            }
+        }
+
+        &__promo{
+            order: 3;
+            width: 100%;
+            &-input{
+                width: 90%;
+            }
+        }
+
+        &__btn{
+            margin-right: auto;
+        }
+    }
+}
+
+
+@media (max-width: 450px) {
+    .cart{
+
+        .cart-product{
+            &__main{
+                position: relative;
+            }
+
+            &__delete-product{
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            &__info{
+                &-bottom{
+                    &_text{
+                        width: 100%;
+                    }
+                }
+
+                .products__item-center{
+                    flex-direction: column;
+                    align-items: start;
+                    .products__item-counter{
+                        margin-right: 0;
+                        order: 1;
+                        margin-bottom: 25px;
+                    }
+
+                    .products__item-price{
+                        margin-right: 0;
+                        order: 2;
+                    }
+                }
+            }
+        }
+
+
+        &__options{
+            flex-direction: column;
+            align-items: start;
+
+            .share-btn,
+            .backToShop-btn{
+                margin-bottom: 20px;
+            }
+        }
+
+
+        &__btn{
+            width: 100%;
+        }
+    }
 }

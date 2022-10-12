@@ -1,10 +1,12 @@
-.contacts{
+.contacts {
     position: relative;
-    &__map{
+
+    &__map {
         height: 60vh;
     }
-    &__info{
-        width: 25%;
+
+    &__info {
+        width: 570px;
         position: absolute;
         background-color: #FAF6F0;
         border-radius: 50px;
@@ -13,30 +15,78 @@
         left: 140px;
         padding: 40px;
 
-        &-item{
+        &-item {
             display: flex;
-            &:not(:last-child){
+
+            &:not(:last-child) {
                 margin-bottom: 18px;
             }
-            &_title{
+
+            &_title {
                 width: 30%;
                 font-size: 18px;
                 font-family: 'OrchideaProSemiBold';
             }
-            &_text{
+
+            &_text {
                 width: 70%;
                 font-size: 18px;
             }
-            &_link{
+
+            &_link {
                 font-size: 18px;
                 color: #454850;
                 transition: .3s;
-                &:hover{
+
+                &:hover {
                     color: #C79B77;
                 }
             }
-            &_tel{
+
+            &_tel {
                 font-family: 'OrchideaProSemiBold';
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1400px) {
+    .contacts {
+        &__info {
+            top: 15px;
+            left: 15px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .contacts {
+        &__map {
+            height: 40vh;
+        }
+    }
+}
+
+
+@media (max-width: 750px) {
+    .contacts {
+        &__info {
+            width: 100%;
+            position: static;
+        }
+    }
+}
+
+
+@media (max-width: 550px) {
+    .contacts{
+        &__info{
+            &-item{
+                flex-direction: column;
+                &_title{
+                    margin-bottom: 6px;
+                }
             }
         }
     }

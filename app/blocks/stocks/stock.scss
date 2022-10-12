@@ -14,13 +14,13 @@
     &__info {
         width: 50%;
         &-title {
-            font-size: 45px;
+            @include adaptiv-font(45,20);
             font-family: 'OrchideaProSemiBold';
             margin-bottom: 20px;
         }
 
         &-text {
-            font-size: 18px;
+            @include adaptiv-font(18,15);
             line-height: 140%;
             width: 55%;
             margin-bottom: 71px;
@@ -28,9 +28,39 @@
 
         &-description{
             width: 55%;
-            font-size: 18px;
+            @include adaptiv-font(18,15);
             line-height: 140%;
             font-family: 'OrchideaProSemiBold';
+        }
+    }
+}
+
+
+@media (max-width: 1400px) {
+    .stock{
+        &__info{
+            width: 45%;
+            &-text,
+            &-description{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .stock{
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__img{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &__info{
+            width: 90%;
+            margin: auto;
         }
     }
 }

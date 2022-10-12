@@ -16,10 +16,40 @@
         width: 50%;
         &-text {
             width: 55%;
-            font-size: 18px;
+            @include adaptiv-font(18,15);
             line-height: 140%;
             &:not(:last-child){
                 margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1350px) {
+    .about{
+        &__info{
+            &-text{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .about{
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__img{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &__info{
+            width: 100%;
+            &-text{
+                width: 90%;
+                margin: auto;
             }
         }
     }

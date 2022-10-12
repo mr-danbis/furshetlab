@@ -1,22 +1,88 @@
-.other-stocks{
-    & > .container {
-        .stocks__list{
+.other-stocks {
+    &>.container {
+        .stocks__list {
             display: flex;
             justify-content: space-between;
-            & > .stocks__item {
-                width: 30%;
+
+            &>.stocks__item {
+                width: 32%;
                 flex-direction: column;
                 margin-bottom: 0;
-                & > .stocks__item-left{
+
+                &>.stocks__item-left {
                     width: 100%;
                     margin-bottom: 30px;
+
+                    &>.stocks__item-info {
+                        width: 35%;
+                        margin-left: 30px;
+                        max-width: none;
+                    }
+
+                    &>.stocks__item-img {
+                        width: 45%;
+                        border-radius: 40px;
+                        object-fit: cover;
+                    }
                 }
 
-                & > .stocks__item-right{
+                &>.stocks__item-right {
                     width: 90%;
-                    margin: auto;
-                    & > .stocks__item-btn {
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    &>.stocks__item-btn {
                         margin: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1400px) {
+    .other-stocks {
+        padding-bottom: 10px;
+        .container {
+            .stocks__list {
+                margin: 0 -15px;
+                display: flex;
+                flex-direction: column;
+                .slick-list {
+                    .slick-track {
+                        
+
+                        .stocks__item {
+                            padding: 0 15px;
+
+                            &-left,
+                            &-right {
+                                width: 100%;
+                            }
+
+                            &-left {
+                                margin-bottom: 30px;
+                            }
+
+                            &-right{
+                                &_condition{
+                                    width: 90%;
+                                }
+                            }
+
+                            &-info {
+                                width: 35%;
+                                margin-left: 30px;
+                                max-width: none;
+                            }
+
+                            &-img {
+                                width: 45%;
+                                border-radius: 40px;
+                                object-fit: cover;
+                            }
+                        }
                     }
                 }
             }

@@ -4,6 +4,7 @@
     &__list{
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
     }
     &__item{
         &:not(:last-child){
@@ -21,7 +22,7 @@
         }
     }
     &__link{
-        font-size: 18px;
+        @include adaptiv-font(18,15);
         color: rgba(69, 72, 80, 0.5);
         &--active{
             color: #454850;

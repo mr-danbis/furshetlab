@@ -5,8 +5,9 @@
         margin-bottom: 30px;
     }
 
+
     &__nav {
-        width: 35%;
+        width: 600px;
         margin-bottom: 50px;
         display: flex;
         justify-content: space-between;
@@ -28,14 +29,32 @@
     }
 
     &__data {
+        width: 700px;
         display: none;
         @include adaptiv-font(18, 15);
-        width: 40%;
 
         &-item {
             display: flex;
             align-items: start;
             margin-bottom: 30px;
+
+            &--edit {
+                position: relative;
+                &:after {
+                    position: absolute;
+                    content: url(/images/icons/edit-icon.svg);
+                    right: 0;
+                    bottom: 18px;
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+
+            &--edit-birth {
+                &:after {
+                    right: 40px;
+                }
+            }
         }
 
         &-item:last-child {
@@ -84,6 +103,7 @@
     }
 
     &__bonuses {
+        width: 900px;
         @include adaptiv-font(18, 15);
         display: none;
 
@@ -93,9 +113,7 @@
         }
 
         &-status {
-            width: 50%;
             display: flex;
-            justify-content: space-between;
             align-items: start;
 
             &_title {
@@ -103,6 +121,7 @@
                 font-family: 'OrchideaProSemiBold';
                 position: relative;
                 padding-right: 14px;
+                margin-right: 40px;
                 padding-top: 5px;
                 padding-bottom: 5px;
                 display: flex;
@@ -159,41 +178,48 @@
     &__history {
         display: none;
 
-        &-list{
+        &-list {
             margin-bottom: 60px;
             display: flex;
             justify-content: space-between;
         }
+
         &-item {
             width: 32%;
             border: 1px solid rgba(69, 72, 80, 0.2);
             border-radius: 50px;
             padding: 30px 40px;
             position: relative;
-            &_title{
-                @include adaptiv-font(24,18);
+
+            &_title {
+                @include adaptiv-font(24, 18);
                 font-family: 'OrchideaProBold';
                 margin-bottom: 37px;
             }
-            &_point{
-                @include adaptiv-font(18,15);
+
+            &_point {
+                @include adaptiv-font(18, 15);
                 display: flex;
-                &-title{
+
+                &-title {
                     width: 40%;
                     font-family: 'OrchideaProSemiBold';
                 }
-                &-text{
-                    &>span{
-                        &:first-child{
+
+                &-text {
+                    &>span {
+                        &:first-child {
                             margin-right: 17px;
                         }
                     }
                 }
-                &:not(:last-child){
+
+                &:not(:last-child) {
                     margin-bottom: 17px;
                 }
             }
-            &:after{
+
+            &:after {
                 position: absolute;
                 content: url(/images/icons/cart.svg);
                 top: 20px;
@@ -204,8 +230,138 @@
 }
 
 
-.content{
-    &-active{
+.content {
+    &-active {
         display: block !important;
+    }
+}
+
+
+@media (max-width: 1850px) {
+    .account{
+        &__history{
+            &-item{
+                &_point{
+                    flex-direction: column;
+                    &-title{
+                        width: 100%;
+                        margin-bottom: 6px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1350px) {
+    .account{
+        &__history{
+            &-item{
+                &:after{
+                    right: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1000px) {
+    .account{
+        &__bonuses{
+            width: 100%;
+            &-status{
+                flex-direction: column;
+                &_title{
+                    margin-bottom: 14px;
+                }
+                &_item{
+                    justify-content: space-between;
+                    &>div{
+                        width: 270px;
+                        display: flex;
+                        justify-content: space-between;
+                         &>.account__bonuses-status_item-type{
+                            margin-right: 0;
+                         }
+                    }
+                    &-descr{
+                        max-width: none;
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media (max-width: 750px) {
+    .account{
+        &__nav{
+            width: 100%;
+        }
+        &__data{
+            width: 100%;
+        }
+        &__history{
+            &-slider{
+                &>.slider-theme__navigation{
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .account{
+        &__data{
+            &-item{
+                flex-direction: column;
+            }
+
+            &-title{
+                width: 100%;
+                margin-bottom: 16px;
+            }
+
+            &-radio,
+            &-input{
+                width: 100%;
+            }
+
+            &-btn{
+                width: 100%;
+            }
+        }
+
+        &__bonuses{
+            &-title{
+                text-align: center;
+            }
+            &-status{
+                align-items: center;
+                &_title{
+                    margin-right: 0;
+                }
+                &_item{
+                    flex-direction: column;
+                    &>div{
+                        width: 90%;
+                        margin-bottom: 8px;
+                    }
+                    &-descr{
+                        width: 90%;
+                        margin: auto;
+                        text-align: center;
+                    }
+                }
+            }
+        }
     }
 }

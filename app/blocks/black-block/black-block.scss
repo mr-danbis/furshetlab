@@ -6,7 +6,7 @@
     @include adaptiv-marginBottom(150,75);
 
     &__wrapper {
-        width: 57%;
+        width: 1080px;
         margin: auto;
         background-color: #454850;
         border-radius: 50px;
@@ -18,7 +18,7 @@
         font-family: 'OrchideaProSemiBold';
         width: 60%;
         margin: auto;
-        font-size: 24px;
+        @include adaptiv-font(24,18);
         line-height: 130%;
         text-align: center;
         margin-bottom: 64px;
@@ -36,19 +36,19 @@
         &-left{
             width: 47%;
             line-height: 130%;
-            font-size: 18px;
+            @include adaptiv-font(18,15);
         }
         &-right{
-            font-size: 18px;
+            @include adaptiv-font(18,15);
             font-family: 'OrchideaProSemiBold';
-            width: 20%;
+            width: 206px;
         }
     }
 }
 
 .cancel{
     &__title{
-        font-size: 45px;
+        @include adaptiv-font(45,20);
     }
     &__item{
         align-items: start;
@@ -64,6 +64,46 @@
             &>.cancel__item-left,
             &>.cancel__item-right{
                 font-family: 'OrchideaProSemiBold';
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1350px) {
+    .black-block{
+        &__wrapper{
+            width: 100%;
+        }
+    }
+}
+
+
+@media (max-width: 900px) {
+    .black-block{
+        &__title{
+            width: 90%;
+        }
+    }
+}
+
+
+@media (max-width: 650px) {
+    .black-block{
+        &>.container{
+            width: 100%;
+        }
+        &__wrapper{
+            border-radius: 0;
+        }
+        &__item{
+            flex-direction: column;
+            &-left{
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            &-right{
+                width: 100%;
             }
         }
     }

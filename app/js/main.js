@@ -36,6 +36,25 @@ $(document).ready(function () {
 
 
 
+    function openProductFilter() {
+        const filterBtn = qs('.sortCountView__filter');
+        const filter = qs('.filter');
+        const filterClodeBtn = qs('.filter__close-btn');
+
+        filterBtn.addEventListener('click', ()=> {
+            filter.style.transform = 'translateX(0)';
+        });
+
+        filterClodeBtn.addEventListener('click', ()=> {
+            filter.style.transform = 'translateX(-200%)';
+        });
+    }
+    if (wrapper.classList.contains('all-dishes-page')) {
+        openProductFilter();
+    }
+
+
+
 
     function hiddenHeaderAddition() {
 
@@ -210,6 +229,19 @@ $(document).ready(function () {
         infinite: false,
         prevArrow: $('.account__history-slider__btn-prev'),
         nextArrow: $('.account__history-slider__btn-next'),
+        responsive: [{
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     });
 
 
@@ -219,6 +251,7 @@ $(document).ready(function () {
         prevArrow: $('.product-slider__btn-prev'),
         nextArrow: $('.product-slider__btn-next'),
     });
+
 
 
     $('.reviews__slider-container').slick({
@@ -306,6 +339,25 @@ $(document).ready(function () {
 
         if (wrapper.classList.contains('payment-delivery-page')) {
             resizePaddingLeft();
+        }
+
+
+        const otherStocksList = qs('.other-stocks>.container>.stocks__list');
+        if (window.screen.width < 1400){
+            $(otherStocksList).slick({
+                slidesToShow: 2,
+                infinite: false,
+                dots: true,
+                arrows: false,
+                responsive: [{
+                    breakpoint: 750,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }]
+            });
+        } else {
+            $(otherStocksList).slick('unslick');
         }
 
 
