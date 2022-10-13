@@ -1,4 +1,5 @@
 .reviews-slider {
+    @include adaptiv-marginBottom(150,75);
     &__inner {
         margin-bottom: 50px;
     }
