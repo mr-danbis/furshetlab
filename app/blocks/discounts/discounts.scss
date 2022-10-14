@@ -8,6 +8,15 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .owl-stage-outer{
+            overflow-x: hidden;
+        }
+
+        .owl-nav,
+        .owl-dots{
+            display: none;
+        }
     }
     &__item{
         display: flex;

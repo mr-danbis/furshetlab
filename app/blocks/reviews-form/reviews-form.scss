@@ -1,8 +1,12 @@
 .reviews-form {
     width: 40%;
     margin: auto;
+
     &__title {
-        position: static;
+        &:after,
+        &:before {
+            visibility: hidden;
+        }
     }
 
     &__content {
@@ -12,25 +16,25 @@
         align-items: center;
 
     }
-    
+
     &__group {
         width: 100%;
         display: flex;
         align-items: center;
         margin-bottom: 95px;
 
-        h3{
+        h3 {
             font-weight: 400;
             margin-right: 37px;
             color: rgba(69, 72, 80, 0.5);
-            @include adaptiv-font(18,15);
+            @include adaptiv-font(18, 15);
         }
 
-        div{
+        div {
             display: flex;
         }
 
-        img:not(:last-child){
+        img:not(:last-child) {
             margin-right: 11px;
         }
     }
@@ -44,48 +48,51 @@
         border: none;
         border-bottom: 1px solid rgba(69, 72, 80, 0.2) !important;
         background-color: transparent;
-        &::placeholder{
+
+        &::placeholder {
             color: rgba(69, 72, 80, 0.5);
-            @include adaptiv-font(18,15);
+            @include adaptiv-font(18, 15);
         }
     }
 
-    &__input{
+    &__input {
         padding-bottom: 12px;
     }
 
-    &__btn{
+    &__btn {
         width: 45%;
-        &:hover{
+
+        &:hover {
             background-color: transparent;
         }
     }
 
-    
+
 }
 
 
 @media (max-width: 1500px) {
-    .reviews-form{
+    .reviews-form {
         width: 520px;
     }
 }
 
 @media (max-width: 600px) {
-    .reviews-form{
+    .reviews-form {
         width: 100%;
     }
 }
 
 @media (max-width: 450px) {
-    .reviews-form{
-        &__group{
-            img{
+    .reviews-form {
+        &__group {
+            img {
                 width: 21px;
                 height: 21px;
             }
         }
-        &__btn{
+
+        &__btn {
             width: 100%;
         }
     }

@@ -1,21 +1,28 @@
 .slider-theme {
-    &__container {
-        @include adaptiv-marginBottom(35, 17);
-        @include adaptiv-marginRight(-40, -5);
-        @include adaptiv-marginLeft(-40, -5);
-    }
+    overflow-x: hidden;
 
     &__item {
-        // @include adaptiv-marginRight(40, 5);
-        // @include adaptiv-marginLeft(40, 5);
         border-radius: 50px;
     }
+}
 
-    &__navigation {
+
+.owl {
+    &-stage {
+        display: flex;
+    }
+
+    &-dots{
+        display: none;
+        margin-top: 35px;
+    }
+
+    &-nav {
+        margin-top: 35px;
         display: flex;
         justify-content: end;
 
-        &-btn {
+        button {
             width: 50px;
             height: 50px;
             border: 1px solid rgba(69, 72, 80, 0.5);
@@ -28,72 +35,61 @@
                 background-color: #C79B77;
                 border: 1px solid transparent;
             }
-        }
 
-        &-prev {
-            margin-right: 15px;
-            content: url(/images/icons/arrow-prev-black.svg);
-
-            &:hover {
-                content: url(/images/icons/arrow-prev-white.svg);
-            }
-        }
-
-        &-next {
-            content: url(/images/icons/arrow-next-black.svg);
-
-            &:hover {
-                content: url(/images/icons/arrow-next-white.svg);
+            span{
+                display: none;
             }
         }
     }
-}
 
-
-
-.slick{
-    &-list{
-        padding: 15px 0 !important;
-    }
-    // &-slide{
-    //     margin: 0 40px;
-    // }
-    &-dots{
-        height: 10px;
-        margin-top: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        & > li{
-            width: 8px;
-            height: 8px;
-            border: 1px solid #454850;
-            background-color: transparent;
-            border-radius: 50%;
-            transition: all .3s;
-            &:not(:last-child){
-                margin-right: 10px;
-            }
-            & > button {
-                color: transparent;
-            }
+    &-prev {
+        margin-right: 15px;
+        background-image: url(/images/icons/arrow-prev-black.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        &:hover {
+            background-image: url(/images/icons/arrow-prev-white.svg);
         }
-        
-        & > .slick-active{
-            background-color: #DFB778;
-            border: 1px solid #454850;
-            border-radius: 50%;
-            width: 12px;
-            height: 12px;
+    }
+
+    &-next {
+        background-image: url(/images/icons/arrow-next-black.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        &:hover {
+            background-image: url(/images/icons/arrow-next-white.svg);
         }
     }
 }
 
 
 @media (max-width: 750px) {
-    .slider-theme {
-        &__navigation {
+    .owl{
+        &-nav{
             display: none;
+        }
+
+        &-dots{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-dot{
+            width: 8px;
+            height: 8px;
+            border: 1px solid #454850;
+            border-radius: 50%;
+            background-color: transparent;
+            &:not(:last-child){
+                margin-right: 10px;
+            }
+        }
+
+        &-dot.active{
+            width: 12px;
+            height: 12px;
+            background-color: #DFB778;
         }
     }
 }
