@@ -55,8 +55,6 @@
     }
   }
   &__content {
-    &-item {
-    }
     &--active {
       display: block;
     }
@@ -199,10 +197,6 @@
 @media (max-width: 1600px) {
   .package__block {
     width: 60%;
-    .products {
-      &__list {
-      }
-    }
   }
 }
 
