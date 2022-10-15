@@ -1,6 +1,16 @@
 .delivery {
     @include adaptiv-marginBottom(150, 75);
 
+
+    .owl{
+        &-dots{
+            display: none;
+        }
+        &-stage-outer{
+            overflow-x: visible;
+        }
+    }
+
     &__сategories {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -9,7 +19,6 @@
 
     &__category{
         display: block;
-        // border-radius: 50px;
         overflow: hidden;
         position: relative;
         transition: all .3s;

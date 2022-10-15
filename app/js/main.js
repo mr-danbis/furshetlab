@@ -236,6 +236,7 @@ $(document).ready(function () {
     const favouritesSlider = new Slider();
     const accountHistorySlider = new Slider();
     const reviewsPageSlider = new Slider();
+    const newsPageSlider = new Slider();
 
 
 
@@ -284,24 +285,28 @@ $(document).ready(function () {
         }
     });
 
-    newsSlider.addSlider(".news__slider-container", {
-        responsive: {
-            0: {
-                items: 1,
-                margin: 10,
-            },
 
-            750: {
-                items: 2,
-                margin: 20,
-            },
+    if(wrapper.classList.contains('main-page')){
+        newsSlider.addSlider(".news__slider-container", {
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 10,
+                },
+    
+                650: {
+                    items: 2,
+                    margin: 20,
+                },
+    
+                1300: {
+                    items: 3,
+                    margin: 40,
+                },
+            }
+        });
+    }
 
-            1300: {
-                items: 3,
-                margin: 40,
-            },
-        }
-    });
 
 
     clientsSlider.addSlider(".clients__slider-container", {
@@ -364,6 +369,12 @@ $(document).ready(function () {
 
 
     reviewsPageSlider.addSlider(".reviews-slider__inner", {
+        margin: 20,
+        items: 1
+    });
+
+
+    newsPageSlider.addSlider(".news-slider__inner", {
         margin: 20,
         items: 1
     });
