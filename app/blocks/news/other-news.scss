@@ -1,0 +1,15 @@
+.other-news {
+    .news__slider-container {
+        display: flex;
+    }
+
+
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    .owl-stage {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}

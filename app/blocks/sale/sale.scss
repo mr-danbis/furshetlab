@@ -2,8 +2,11 @@
     background-image: url(/images/icons/section-title-bg.svg);
     background-size: contain;
     background-repeat: no-repeat;
-    &__inner .container .products__list .products__item::before{
-        display: none;
+    &__inner{
+        .products__item::before{
+            background-color: #E64732;
+            content: '-31%';
+        }
     }
     
     &__title{

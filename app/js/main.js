@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
     $.noConflict();
 
     const header = qs('.header');
@@ -7,15 +7,14 @@ $(document).ready(function () {
 
 
 
+
     function qs(selector) {
         return document.querySelector(`${selector}`);
     }
 
-
     function resizeMainPadding() {
         qs('.main').style.paddingTop = `${header.clientHeight-3}px`;
     }
-    resizeMainPadding();
 
 
 
@@ -58,11 +57,15 @@ $(document).ready(function () {
 
 
     function hiddenHeaderAddition() {
+        const headerTop = qs('.header__top');
 
         if (pageYOffset > 150) {
             qs('.header__addition').style.transform = 'translateY(-150%)';
+            header.style.height = `${headerTop.clientHeight}px`;
+
         } else {
             qs('.header__addition').style.transform = 'translateY(0%)';
+            header.style.height = ' ';
         }
 
     }
@@ -127,16 +130,20 @@ $(document).ready(function () {
 
 
     function modalOpenCloseCallback() {
-        const callbackBtn = qs('.number-order');
+        const callbackBtns = document.querySelectorAll('.number-order');
         const modalCallback = qs('.modal-callback');
         const modalCloseBtn = document.querySelectorAll('.modal__close-btn');
 
-        callbackBtn.addEventListener('click', () => {
-            modalCallback.style.display = 'block';
-            qs('header').style.opacity = '0.5';
-            qs('main').style.opacity = '0.5';
-            qs('footer').style.opacity = '0.5';
+
+        callbackBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modalCallback.style.display = 'block';
+                qs('header').style.opacity = '0.5';
+                qs('main').style.opacity = '0.5';
+                qs('footer').style.opacity = '0.5';
+            });
         });
+
         modalCloseBtn.forEach(btn => {
             btn.addEventListener('click', () => {
                 modalCallback.style.display = 'none';
@@ -228,7 +235,6 @@ $(document).ready(function () {
             $(owlElement).owlCarousel(owlOptions);
         }
     }
-
     const reviewsSlider = new Slider();
     const newsSlider = new Slider();
     const clientsSlider = new Slider();
@@ -237,6 +243,7 @@ $(document).ready(function () {
     const accountHistorySlider = new Slider();
     const reviewsPageSlider = new Slider();
     const newsPageSlider = new Slider();
+    const fullNewsPageSlider = new Slider();
 
 
 
@@ -286,19 +293,19 @@ $(document).ready(function () {
     });
 
 
-    if(wrapper.classList.contains('main-page')){
+    if (wrapper.classList.contains('main-page')) {
         newsSlider.addSlider(".news__slider-container", {
             responsive: {
                 0: {
                     items: 1,
                     margin: 10,
                 },
-    
+
                 650: {
                     items: 2,
                     margin: 20,
                 },
-    
+
                 1300: {
                     items: 3,
                     margin: 40,
@@ -379,14 +386,34 @@ $(document).ready(function () {
         items: 1
     });
 
+    fullNewsPageSlider.addSlider(".other-news .news__slider-container", {
+        margin: 20,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        },
+    });
 
 
 
+    function contentLoaded() {
 
-    window.onresize = function () {
+        resizeMainPadding();
+
         if (wrapper.classList.contains('payment-delivery-page')) {
             resizePaddingLeft();
         }
+
+        discountsSlider.addMobileSlider(".discounts__inner", {
+            items: 1,
+        }, 750);
 
 
         deliverySlider.addMobileSlider(".delivery__сategories", {
@@ -395,26 +422,20 @@ $(document).ready(function () {
         }, 750);
 
 
-        if(wrapper.classList.contains('main-page')){
+        if (wrapper.classList.contains('main-page')) {
             productSlider.addMobileSlider(".products__list", {
                 margin: 20,
                 responsive: {
                     0: {
                         items: 1,
                     },
-    
+
                     550: {
                         items: 2,
                     }
                 }
             }, 750);
         }
-
-
-
-        discountsSlider.addMobileSlider(".discounts__inner", {
-            items: 1,
-        }, 750);
 
 
         stocksSlider.addMobileSlider(".other-stocks .stocks__list", {
@@ -429,7 +450,14 @@ $(document).ready(function () {
                 }
             }
         }, 1400);
+    }
+    contentLoaded();
 
 
+
+
+
+    window.onresize = function () {
+        contentLoaded();
     };
 });

@@ -4,7 +4,7 @@
     &__slider {
         &-item {
             border: 1px solid rgba(219, 192, 158, 0.3);
-            @include adaptiv-padding(30,15);
+            @include adaptiv-padding(30, 15);
             transition: all .3s;
 
             &:hover {
@@ -50,20 +50,27 @@
                 justify-content: space-between;
             }
 
-            &_date{
+            &_date {
                 font-family: 'OrchideaProRegular';
-                @include adaptiv-font(16,12);
+                @include adaptiv-font(16, 12);
             }
 
-            &_more{
+            &_more {
                 font-family: 'OrchideaProMedium';
-                @include adaptiv-font(18,15);
+                @include adaptiv-font(18, 15);
                 color: #454850;
                 transition: all .3s;
-                &:hover{
+
+                &:hover {
                     color: #DBC09E;
                 }
             }
         }
+    }
+
+
+    .owl-stage {
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 }

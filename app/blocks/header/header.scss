@@ -219,11 +219,9 @@
 @media (max-width: 750px) {
     .header {
         &__logo {
-            top: 100%;
             width: 136px;
-            left: 50%;
-            margin-right: -50%;
-            transform: translate(-50%, -50%)
+            position: static;
+            margin-top: -5%;
         }
 
         &__top {
@@ -232,6 +230,7 @@
             }
 
             &-inner {
+                height: 23px;
                 width: 100%;
             }
 
