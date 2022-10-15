@@ -19,6 +19,12 @@
         border-radius: 110px 0px 0px 110px;
         @include adaptiv-font(45,20);
     }
+
+    .products{
+        &__item:not(:first-child, :nth-child(2), :nth-child(3)){
+            display: none !important;
+        }
+    }
 }
 
 @media (max-width: 650px) {

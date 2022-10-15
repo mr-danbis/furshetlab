@@ -1,6 +1,7 @@
 .other-stocks {
     &>.container {
         .stocks__list {
+            overflow-x: hidden;
             display: flex;
             justify-content: space-between;
 
@@ -43,47 +44,42 @@
 
 @media (max-width: 1400px) {
     .other-stocks {
-        padding-bottom: 10px;
-        .container {
-            .stocks__list {
-                margin: 0 -15px;
+        .stocks {
+            &__list {
+                flex-direction: column;
+            }
+
+            &__item{
                 display: flex;
                 flex-direction: column;
-                .slick-list {
-                    .slick-track {
-                        
 
-                        .stocks__item {
-                            padding: 0 15px;
+                &-left,
+                &-right{
+                    width: 100%;
+                }
 
-                            &-left,
-                            &-right {
-                                width: 100%;
-                            }
+                &-left{
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
 
-                            &-left {
-                                margin-bottom: 30px;
-                            }
 
-                            &-right{
-                                &_condition{
-                                    width: 90%;
-                                }
-                            }
-
-                            &-info {
-                                width: 35%;
-                                margin-left: 30px;
-                                max-width: none;
-                            }
-
-                            &-img {
-                                width: 45%;
-                                border-radius: 40px;
-                                object-fit: cover;
-                            }
-                        }
+@media (max-width: 1000px) {
+    .other-stocks {
+        .stocks {
+            &__item{
+                &-right{
+                    flex-direction: column;
+                    &_conditions{
+                        width: 100%;
                     }
+                }
+
+                &-btn{
+                    width: 50%;
                 }
             }
         }

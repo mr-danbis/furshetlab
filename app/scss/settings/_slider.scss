@@ -10,11 +10,19 @@
 .owl {
     &-stage {
         display: flex;
+        &-outer{
+            overflow-x: hidden;
+        }
     }
 
     &-dots{
         display: none;
         margin-top: 35px;
+    }
+
+    &-drag{
+        display: flex;
+        flex-direction: column;
     }
 
     &-nav {

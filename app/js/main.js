@@ -217,29 +217,114 @@ $(document).ready(function () {
 
 
 
-    $(".discounts__inner").owlCarousel({
+
+    class Slider {
+        constructor(owlElement, owlOptions) {
+            this.owlElement = owlElement;
+            this.owlOptions = owlOptions;
+        }
+
+        addSlider(owlElement, owlOptions) {
+            $(owlElement).owlCarousel(owlOptions);
+        }
+    }
+
+    const reviewsSlider = new Slider();
+    const newsSlider = new Slider();
+    const clientsSlider = new Slider();
+    const allProductSlider = new Slider();
+    const favouritesSlider = new Slider();
+    const accountHistorySlider = new Slider();
+    const reviewsPageSlider = new Slider();
+
+
+
+
+    class MobileSlider extends Slider {
+        constructor(owlElement, owlOptions, windowWidth) {
+            super(owlElement, owlOptions);
+            this.windowWidth = windowWidth;
+        }
+
+        addMobileSlider(owlElement, owlOptions, windowWidth) {
+            if (window.innerWidth > windowWidth) {
+                $(owlElement).trigger('destroy.owl.carousel');
+            } else {
+                $(owlElement).owlCarousel(owlOptions);
+            }
+        }
+    }
+    const deliverySlider = new MobileSlider();
+    const productSlider = new MobileSlider();
+    const discountsSlider = new MobileSlider();
+    const stocksSlider = new MobileSlider();
+
+
+
+
+
+
+
+    reviewsSlider.addSlider(".reviews__slider-container", {
         responsive: {
             0: {
                 items: 1,
-            },
-
-            550: {
-                items: 2,
+                margin: 10,
             },
 
             750: {
+                items: 2,
+                margin: 20,
+            },
+
+            1300: {
                 items: 3,
+                margin: 40,
+            },
+        }
+    });
+
+    newsSlider.addSlider(".news__slider-container", {
+        responsive: {
+            0: {
+                items: 1,
+                margin: 10,
+            },
+
+            750: {
+                items: 2,
+                margin: 20,
+            },
+
+            1300: {
+                items: 3,
+                margin: 40,
             },
         }
     });
 
 
+    clientsSlider.addSlider(".clients__slider-container", {
+        responsive: {
+            750: {
+                items: 5,
+                margin: 20
+            },
+
+            1000: {
+                items: 8,
+                margin: 40
+            },
+        }
+    });
 
 
+    allProductSlider.addSlider(".package__block .product__slider-list", {
+        items: 1,
+        margin: 20
+    });
 
-
-
-    $(".reviews__slider-container").owlCarousel({
+    favouritesSlider.addSlider(".favourites .products__list", {
         responsive: {
             0: {
                 items: 1,
@@ -260,35 +345,80 @@ $(document).ready(function () {
 
 
 
-    $(".news__slider-container").owlCarousel({
+    accountHistorySlider.addSlider(".account__history-list", {
+        margin: 20,
         responsive: {
             0: {
-                items: 1,
-                margin: 10,
+                items: 1
             },
 
-            750: {
-                items: 2,
-                margin: 20,
+            700: {
+                items: 2
             },
 
-            1300: {
-                items: 3,
-                margin: 40,
+            1100: {
+                items: 3
             },
-        }
+        },
     });
 
-    $(".clients__slider-container").owlCarousel({
-        items: 8,
-        margin: 40
+
+    reviewsPageSlider.addSlider(".reviews-slider__inner", {
+        margin: 20,
+        items: 1
     });
+
+
+
 
 
     window.onresize = function () {
         if (wrapper.classList.contains('payment-delivery-page')) {
             resizePaddingLeft();
         }
-    };
 
+
+        deliverySlider.addMobileSlider(".delivery__сategories", {
+            items: 1,
+            margin: 20
+        }, 750);
+
+
+        if(wrapper.classList.contains('main-page')){
+            productSlider.addMobileSlider(".products__list", {
+                margin: 20,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+    
+                    550: {
+                        items: 2,
+                    }
+                }
+            }, 750);
+        }
+
+
+
+        discountsSlider.addMobileSlider(".discounts__inner", {
+            items: 1,
+        }, 750);
+
+
+        stocksSlider.addMobileSlider(".other-stocks .stocks__list", {
+            margin: 20,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+
+                750: {
+                    items: 2,
+                }
+            }
+        }, 1400);
+
+
+    };
 });

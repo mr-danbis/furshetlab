@@ -4,8 +4,33 @@
         margin-bottom: 50px;
     }
     &__item{
+        padding-top: 10px;
         display: grid !important;
         grid-template-columns: repeat(3, 1fr);
-        grid-row-gap: 40px;
+        grid-gap: 40px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .reviews-slider{
+        &__item{
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+    }
+}
+
+
+@media (max-width: 700px) {
+    .reviews-slider{
+        &__item{
+            grid-template-columns: repeat(1, 1fr);
+            grid-column-gap: 0;
+
+            .reviews__slider-item:not(:first-child, :nth-child(2), :nth-child(3)){
+                display: none;
+            }
+        }
     }
 }

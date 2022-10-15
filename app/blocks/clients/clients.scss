@@ -14,3 +14,16 @@
         }
     }
 }
+
+
+@media (max-width: 1000px) {
+    .clients{
+        &__slider{
+            &-item{
+                &_img{
+                    width: 60%;
+                }
+            }
+        }
+    }
+}

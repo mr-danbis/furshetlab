@@ -28,14 +28,14 @@
 
             &_percent {
                 font-family: 'OrchideaProBold';
-                @include adaptiv-font(64, 40);
+                @include adaptiv-font(55, 35);
                 color: #DBC09E;
                 text-align: center;
             }
 
             &_text {
                 font-family: 'OrchideaProBold';
-                @include adaptiv-font(32, 20);
+                @include adaptiv-font(25, 15);
                 color: #DBC09E;
                 text-align: center;
             }
@@ -48,7 +48,7 @@
 
         &-text {
             line-height: 32px;
-            @include adaptiv-font(32, 20);
+            @include adaptiv-font(25, 15);
             color: #FAF6F0;
             text-align: center;
         }

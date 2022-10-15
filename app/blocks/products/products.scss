@@ -1,115 +1,127 @@
-.products{
-    &__list{
+.products {
+    &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        @include adaptiv-marginBottom(60,30);
-        @include adaptiv-gridGap(40,20);
+        @include adaptiv-marginBottom(60, 30);
+        @include adaptiv-gridGap(40, 20);
     }
 
-    &__item{
+    &__item {
         border: 1px solid rgba(219, 192, 158, 0.3);
         border-radius: 40px;
-        @include adaptiv-padding(30,15);
+        @include adaptiv-padding(30, 15);
         display: flex !important;
         flex-direction: column;
         align-items: center;
         transition: all .3s;
         position: relative;
-        &:hover{
+
+        &:hover {
             background-color: #454850;
-            .products__item-btn_cart{
+
+            .products__item-btn_cart {
                 color: #FFFFFF;
                 background-color: $btnColor;
-                &:hover{
+
+                &:hover {
                     border: 1px solid $btnColor;
                     color: $btnColor;
                     background: #FFFFFF;
                 }
             }
+
             .products__item-name,
-            .products__item-newPrice{
+            .products__item-newPrice {
                 color: #DBC09E;
             }
+
             .products__item-weight,
-            .products__item-oldPrice{
+            .products__item-oldPrice {
                 color: rgba(219, 192, 158, 0.5);
             }
 
-            .products__item-oldPrice{
-                &:after{
+            .products__item-oldPrice {
+                &:after {
                     background-color: #DBC09E;
                 }
             }
 
-            .products__item-counter_btn{
+            .products__item-counter_btn {
                 background-color: #DBC09E;
             }
-            .products__item-counter_digit{
+
+            .products__item-counter_digit {
                 background-color: #C79B77;
             }
 
-            .products__item-btn_like svg path{
+            .products__item-btn_like svg path {
                 stroke: #DBC09E;
             }
         }
 
-        &::before{
+        &::before {
             position: absolute;
             content: 'Новинка';
             background-color: #83EC52;
             border-radius: 20px;
             color: #454850;
             padding: 10px 15px;
-            @include adaptiv-font(15,8);
+            @include adaptiv-font(15, 8);
             top: 15px;
         }
 
-        &-info{
+        &-info {
             width: 100%;
         }
 
-        &-img{
+        &-img {
             width: 100%;
             // border-radius: 50px;
             overflow: hidden;
-            @include adaptiv-marginBottom(25,12);
+            @include adaptiv-marginBottom(25, 12);
         }
 
-        &-top{
-            @include adaptiv-marginBottom(32,16);
+        &-top {
+            @include adaptiv-marginBottom(32, 16);
             display: flex;
             justify-content: space-between;
             align-items: start;
         }
-        &-name{
+
+        &-name {
             font-family: 'OrchideaProBold';
-            @include adaptiv-font(22,18);
+            @include adaptiv-font(22, 18);
             width: 75%;
             height: 60px;
             color: #454850;
         }
-        &-weight{
+
+        &-weight {
             font-family: 'OrchideaProBold';
-            @include adaptiv-font(18,9);
+            @include adaptiv-font(18, 9);
             color: rgba(69, 72, 80, 0.5);
         }
-        &-center{
-            @include adaptiv-marginBottom(60,30);
+
+        &-center {
+            @include adaptiv-marginBottom(60, 30);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        &-newPrice{
+
+        &-newPrice {
             font-family: 'OrchideaProBold';
             color: #454850;
-            @include adaptiv-font(32,25);
+            @include adaptiv-font(32, 25);
         }
-        &-oldPrice{
+
+        &-oldPrice {
             font-family: 'OrchideaProBold';
             color: rgba(69, 72, 80, 0.5);
-            @include adaptiv-font(18,15);
+            @include adaptiv-font(18, 15);
             position: relative;
-            &:after{
+
+            &:after {
                 position: absolute;
                 content: '';
                 width: 67px;
@@ -120,63 +132,74 @@
                 top: 10px;
             }
         }
-        &-counter{
+
+        &-counter {
             display: flex;
-            &_btn{
+
+            &_btn {
                 width: 43.33px;
                 height: 43px;
                 background-color: #454850;
-                color:#FFFFFF;
+                color: #FFFFFF;
                 transition: all .3s;
-                &:hover{
+
+                &:hover {
                     opacity: 0.7;
                 }
             }
-            &_digit{
-                @include adaptiv-font(18,9);
+
+            &_digit {
+                @include adaptiv-font(18, 9);
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color:#FFFFFF;
+                color: #FFFFFF;
                 width: 43.33px;
                 height: 43px;
                 background-color: #2C2F36;
             }
-            &_minus{
+
+            &_minus {
                 border-radius: 10px 0px 0px 10px;
             }
-            &_plus{
+
+            &_plus {
                 border-radius: 0px 10px 10px 0px;
             }
         }
-        &-bottom{
+
+        &-bottom {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        &-btn{
-            &_cart{
+
+        &-btn {
+            &_cart {
                 width: 55%;
                 background-color: #454850;
             }
-            &_like{
+
+            &_like {
                 transition: all .3s;
-                &:hover svg{
+
+                &:hover svg {
                     fill: #DBC09E;
                 }
             }
         }
     }
 
-    &__more{
-        @include adaptiv-marginBottom(150,75);
+    &__more {
+        @include adaptiv-marginBottom(150, 75);
         margin-right: auto;
         margin-left: auto;
         background-color: transparent;
         color: #454850;
         border: 1px solid #C79B77;
         width: 20%;
-        &:hover{
+
+        &:hover {
             background-color: #C79B77;
             color: #fff;
         }
@@ -186,8 +209,8 @@
 
 
 @media (max-width: 1000px) {
-    .products{
-        &__list{
+    .products {
+        &__list {
             grid-template-columns: repeat(2, 1fr);
         }
 
@@ -196,17 +219,24 @@
 
 
 @media (max-width: 750px) {
-    .products{
-        &__more{
+    .products {
+        &__more {
             display: none;
         }
-        &__item{
-            &-counter{
-                &_btn{
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__item {
+            &-counter {
+                &_btn {
                     height: 33px;
                     width: 33px;
                 }
-                &_digit{
+
+                &_digit {
                     height: 33px;
                     width: 33px;
                 }
@@ -218,8 +248,8 @@
 
 
 @media (max-width: 400px) {
-    .products{
-        &__more{
+    .products {
+        &__more {
             width: 100%;
         }
     }
@@ -227,11 +257,33 @@
 
 
 
+.package {
+    .product {
+        &__slider {
+            overflow-x: hidden;
+        }
+    }
 
-.package > .package__block > .product__slider > .product__slider-list >.slick-list > .slick-track > .product__slider-item > .products__list{
-    grid-template-columns: repeat(2, 1fr);
+    .products {
+        &__list {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__more {
+            display: none;
+        }
+    }
 }
 
-.package > .package__block > .product__slider > .product__slider-list > .slick-list > .slick-track > .product__slider-item > .products__more{
-    display: none;
+
+
+@media (max-width: 600px) {
+    .package {
+        .products {
+            &__list {
+                display: flex !important;
+            }
+        }
+    }
 }

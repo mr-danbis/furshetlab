@@ -59,7 +59,6 @@
 
 @media (max-width: 750px) {
     .discounts{
-        margin-top: 0;
         &>.container{
             width: 100%;
         }
@@ -68,6 +67,8 @@
         }
         &__item{
             display: flex !important;
+            padding-right: 0;
+            justify-content: space-around;
             &:not(:last-child){
                 border-right: none;
             }
@@ -82,6 +83,34 @@
             &-text{
                 font-size: 18px;
             }
+
+            &-info{
+                width: 30%;
+            }
+
+            &-img{
+                width: 30%;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    .discounts{
+        margin-top: -30px;
+        &__item{
+            &-img{
+                width: 140px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .discounts{
+        &__item{
+            justify-content: space-between;
         }
     }
 }
