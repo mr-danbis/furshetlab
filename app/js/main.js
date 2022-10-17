@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function resizeMainPadding() {
         qs('.main').style.paddingTop = `${header.clientHeight-3}px`;
     }
+    resizeMainPadding();
+
 
 
 
@@ -405,7 +407,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function contentLoaded() {
 
-        resizeMainPadding();
 
         if (wrapper.classList.contains('payment-delivery-page')) {
             resizePaddingLeft();
