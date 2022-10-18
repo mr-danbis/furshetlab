@@ -198,6 +198,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+    function productTabs() {
+        let productNav = $(".product__description-navigation_btn");
+        let productContent = $(".product__description-text");
+
+        productNav.on("click", function (event) {
+            let activeContent = $(this).attr("data-target");
+            productNav.removeClass("product__description-navigation_btn--active");
+            productContent.removeClass("content-active");
+            $(activeContent).addClass("content-active");
+            $(this).addClass("product__description-navigation_btn--active");
+        });
+    }
+
+    if (wrapper.classList.contains("product-page")) {
+        productTabs();
+    }
+
+
+
     function showingFullComment() {
         const showMoreCommentBtn = document.querySelectorAll('.reviews__slider-item_more');
 

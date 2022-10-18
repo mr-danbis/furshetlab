@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('../blocks/head/head.html')
+  @@include('../blocks/head/head.html')
 
-<body>
-  <div class="wrapper main-page">
+  <body>
+    <div class="wrapper main-page">
+      @@include('../blocks/header/header.html')
+      <!-- /.header -->
 
-    @@include('../blocks/header/header.html')
-    <!-- /.header --> 
-    
-    <main class="main">
+      <main class="main">
         @@include('../blocks/promo/promo.html')
-        <!-- /.promo --> 
+        <!-- /.promo -->
 
         @@include('../blocks/discounts/discounts.html')
         <!-- /.discounts -->
@@ -34,25 +33,28 @@
         <!-- /.news -->
 
         <div class="bgInner">
-            @@include('../blocks/howOrder/howOrder.html')
-            <!-- /.howOrder -->
-            
-            @@include('../blocks/payment-delivery/payment-delivery.html')
-            <!-- /.payment-delivery -->
-        </div>
+          @@include('../blocks/howOrder/howOrder.html')
+          <!-- /.howOrder -->
 
+          @@include('../blocks/payment-delivery/payment-delivery.html')
+          <!-- /.payment-delivery -->
+        </div>
 
         @@include('../blocks/clients/clients.html')
         <!-- /.clients -->
+      </main>
+      <!-- /.main -->
 
-    </main>
-    <!-- /.main -->
+      @@include('../blocks/modal/modal-callback.html')
+      <!-- /.modal -->
 
-    @@include('../blocks/modal/modal-callback.html')
-    <!-- /.modal -->
+      @@include('../blocks/mobMenu/mobMenu.html')
+      <!-- /.mobMenu -->
 
-    @@include('../blocks/mobMenu/mobMenu.html')
-    <!-- /.mobMenu -->
+      @@include('../blocks/footer/footer.html')
+      <!-- /.footer -->
+    </div>
+    <!-- /.wrapper -->
 
     @@include('../blocks/footer/footer.html')
     <!-- /.footer -->
